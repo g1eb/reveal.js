@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('./Lato-regular.eot');
+    src: url('./Lato-regular.eot?#iefix') format('embedded-opentype'),
+         url('./Lato-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./Lato-italic.eot');
+    src: url('./Lato-italic.eot?#iefix') format('embedded-opentype'),
+         url('./Lato-italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./Lato-bold.eot');
+    src: url('./Lato-bold.eot?#iefix') format('embedded-opentype'),
+         url('./Lato-bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./Lato-bolditalic.eot');
+    src: url('./Lato-bolditalic.eot?#iefix') format('embedded-opentype'),
+         url('./Lato-bolditalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}

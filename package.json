@@ -100,5 +100,11 @@
       "no-eq-null": 2,
       "no-unused-expressions": 0
     }
+  },
+  "dependencies": {
+    "clipboard": "^2.0.11",
+    "reveal.js-copycode": "^1.1.2",
+    "reveal.js-drawer": "^0.1.3",
+    "reveal.js-menu": "^2.1.0"
   }
 }
