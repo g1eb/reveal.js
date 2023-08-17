@@ -1,40 +1,116 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>DSCI 510</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/usc.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+    <!-- Drawing tool plugin -->
+    <link rel="stylesheet" href="plugin/drawer/drawer.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          data-background-image="https://i.imgur.com/vGq14p0.png"
+          data-background-size="contain">
+          <h1>DSCI 510</h1>
+          <h5>Principles of Programming<br />for Data Science</h5>
+          <br />
+          <br />
+          <p>Gleb Satyukov<br />
+          <small>Senior Research Engineer<br />
+          <br />
+          <br />
+          Information Sciences Institute<br />
+          University of Southern California
+          </small></p>
+        </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+        <section>
+          <section>
+            <h2>Hello World</h2>
+            <pre><code class="hljs python" data-line-numbers>def greet_class(greeting=None):
+  &nbsp;&nbsp;&nbsp;&nbsp;greeting = "hello world"
+  &nbsp;&nbsp;&nbsp;&nbsp;print(greeting)
+
+  greet_class()
+            </code></pre>
+          </section>
+
+          <section>
+            <h5>Let's try it out!</h5>
+            <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo" title="Python Playground" frameborder="0" allow="clipboard-write" sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
+          </section>
+        </section>
+
+        <section>
+          <h5>Slide 1</h5>
+        </section>
+
+        <section>
+          <h5>Slide 2</h5>
+        </section>
+
+        <section>
+          <h5>Slide 3</h5>
+        </section>
+
+        <section>
+          <h5>Slide 4</h5>
+        </section>
+
+        <section>
+          <h5>Slide 5</h5>
+        </section>
+
+        <section>
+          <h5>The End</h5>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/copycode/copycode.js"></script>
+    <script src="plugin/drawer/drawer.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        copycode: {
+          timeout: 1200
+        },
+
+        drawer: {
+          colors: ["#fa1e0e", "#ff4500", "#ffca3a", "#32cd32", "#0077ea", "#7f11e0"],
+          pathSize: 3,
+        },
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealNotes,
+
+          // third-party plugins
+          RevealDrawer,
+          CopyCode,
+        ]
+      });
+    </script>
+  </body>
 </html>
