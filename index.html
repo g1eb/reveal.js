@@ -19,6 +19,9 @@
   <body>
     <div class="reveal">
       <div class="slides">
+        <!-- FIRST SLIDE -->
+        <!-- FIRST SLIDE -->
+        <!-- FIRST SLIDE -->
         <section
           data-background-image="https://i.imgur.com/vGq14p0.png"
           data-background-size="contain">
@@ -34,175 +37,396 @@
           University of Southern California
           </small></p>
         </section>
+        <!-- FIRST SLIDE -->
+        <!-- FIRST SLIDE -->
+        <!-- FIRST SLIDE -->
+
 
         <section>
-          <section>
-            <h2>Hello World</h2>
-            <pre><code class="hljs python" data-line-numbers data-trim>
-              def greet_class(greeting=None):
-                  greeting = "hello world"
-                  print(greeting)
-
-              greet_class()
-            </code></pre>
-          </section>
-
-          <section>
-            <h5>Let's try it out!</h5>
-            <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo" title="Python Playground" frameborder="0" allow="clipboard-write" sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
-          </section>
-        </section>
-
-        <section>
-          <h5>Teaching Team</h5>
-          <p class="fragment">Geet Shingi (TA)</p>
-          <p class="fragment">Mia Sultan (TA)</p>
-          <p class="fragment">Yash Dani (CP)</p>
-          <p class="fragment">Tejas Rajurkas (CP)</p>
-          <p class="fragment">Qasim Siddiqui (Grader)</p>
-          <p class="fragment">Masooma Naqvi (Grader)</p>
-        </section>
-
-        <section>
-          <h5>About Me</h5>
-          <p class="fragment">Academic Background</p>
-          <ul>
-            <li class="fragment">Computational linguistics</li>
-            <li class="fragment">Human-Computer Interaction</li>
-          </ul>
-          <p class="fragment">Research Interests</p>
-          <ul>
-            <li class="fragment">Design and development of distributed systems</li>
-            <li class="fragment">Web scraping, UI/UX, applied ML</li>
-            <li class="fragment">Data analysis and visualization</li>
-          </ul>
-          <p class="fragment">Recent Projects</p>
-          <ul>
-            <li class="fragment">SAGE, KGTK, MCS, PIRANHA, INCAS, VENICE, .....</li>
-          </ul>
-        </section>
-
-        <section>
-          <h5>About You</h5>
-          <p class="fragment">Who is in data science?</p>
-          <p class="fragment">Who else is here?</p>
-          <p class="fragment">Prior experience?</p>
-        </section>
-
-        <section>
-          <h5>Grading</h5>
-          <p class="fragment">30% - Lab Assignments</p>
-          <p class="fragment">30% - Midterm Exam</p>
-          <p class="fragment">40% - Final Project</p>
-        </section>
-
-        <section>
-          <h5>Syllabus</h5>
-          <p class="fragment">Grading scheme is in the syllabus</p>
+          <h5>Week 1 - review</h5>
           <p class="fragment">
-            <a href="https://web-app.usc.edu/soc/syllabus/20233/32433.pdf" target="_blank">
-              https://web-app.usc.edu/soc/syllabus/20233/32433.pdf
-            </a>
+            Github Classroom
+          </p>
+          <p class="fragment">
+            Piazza
+          </p>
+          <p class="fragment">
+            D2L
+          </p>
+          <p class="fragment">
+            Syllabus (Schedule/ Grading/ Final Project)
+          </p>
+          <p class="fragment">
+            Office hours after class or on <a href="zoom.gleb.nl" target="_blank">zoom.gleb.nl</a>
+          </p>
+          <p class="fragment">
+            Slides are hosted at <a href="dsci.isi.edu/slides/2" target="_blank">dsci.isi.edu/slides/2</a>
           </p>
         </section>
 
         <section>
-          <h5>On Plagiarism</h5>
-          <p class="fragment">Cheating or collaborating?</p>
-          <p class="fragment">Credit the author!</p>
+          <section>
+            <h5>Building Blocks of Python</h5>
+            <p class="fragment">What makes up a programming language?</p>
+            <p class="fragment">    - Variables / Constants</p>
+            <p class="fragment">    - Code (Lines / Blocks)</p>
+            <p class="fragment">    - Scripts/ Programs</p>
+            <p class="fragment">    - Reserved Keywords</p>
+          </section>
+
+          <section>
+            <h5>Valid variable names</h5>
+            <pre><code class="hljs python" data-line-numbers data-trim>
+def is_valid_variable(name):
+    return name.isidentifier()
+
+print(is_valid_variable("my_var"))     # True
+print(is_valid_variable("123abc"))     # False
+print(is_valid_variable("my-var"))     # False
+print(is_valid_variable("if"))         # False
+            </code></pre>
+          </section>
+
+          <section>
+            <!-- Python Playground -->
+            <!-- Python Playground -->
+            <!-- Python Playground -->
+            <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo" title="Python Playground" frameborder="0" allow="clipboard-write" sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-    popups-to-escape-sandbox"></iframe>
+          </section>
+
+
+          <section>
+            <p>In Python 3.6, there are 33 reserved keywords:</p>
+            <img src="https://i.imgur.com/IRgOGkL.png" />
+          </section>
+          <section>
+            <h5>Reserved keywords in Python</h5>
+            <pre><code class="hljs python" data-line-numbers data-trim>
+import keyword
+
+print(keyword.kwlist)
+
+print('There are {} keywords'.format(len(keyword.kwlist)))
+            </code></pre>
+          </section>
+
+          <section>
+            <!-- Python Playground -->
+            <!-- Python Playground -->
+            <!-- Python Playground -->
+            <iframe src="https://trinket.io/embed/python/c0118fc871" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+          </section>
+
+
+
+          <section>
+            <pre><code class="hljs python" data-line-numbers data-trim>
+x = 5
+y = 10
+
+
+def add(number, another_number):
+    result = number + another_number
+    return result
+
+
+total = add(x, y)
+
+
+print(total)
+            </code></pre>
+          </section>
+
+          <section>
+            <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=x%20%3D%205%0Ay%20%3D%2010%0A%0Adef%20add%28number,%20another_number%29%3A%0A%20%20%20%20result%20%3D%20number%20%2B%20another_number%0A%20%20%20%20return%20result%0A%20%20%20%20%0Atotal%20%3D%20add%28x,%20y%29%0A%0Aprint%28total%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+          </section>
+
+
+
+          <section>
+            <pre><code class="hljs python" data-line-numbers data-trim>
+x = 5
+
+
+if x > 5:
+    print("x is bigger than 5")
+elif x == 5:
+    print("x is equal to 5")
+else:
+    print("x is smaller than 5")
+
+
+x = 10
+
+print(x)
+            </code></pre>
+          </section>
+
+          <section>
+            <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=x%20%3D%205%0A%0A%0Aif%20x%20%3E%205%3A%0A%20%20%20%20print%28%22x%20is%20bigger%20than%205%22%29%0Aelif%20x%20%3D%3D%205%3A%0A%20%20%20%20print%28%22x%20is%20equal%20to%205%22%29%0Aelse%3A%0A%20%20%20%20print%28%22x%20is%20smaller%20than%205%22%29%0A%20%20%20%20%0A%20%20%20%20%0Ax%20%3D%2010%0A%0Aprint%28x%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+          </section>
+
+
         </section>
 
+
+
+
+        <section>
+          <section>
+            <h2>Variable Types</h2>
+            <pre><code class="hljs python" data-line-numbers data-trim>
+x = 5
+y = 5
+z = y
+
+
+print(x is y)
+print(x is z)
+
+print(y is z)
+            </code></pre>
+          </section>
+
+          <section>
+            <iframe loading="lazy" width="100%" height="400" src="https://pythontutor.com/visualize.html#mode=edit" title="Python Tutor" frameborder="0" allow="clipboard-write" sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
+          </section>
+        </section>
+
+
+
+
+        <section>
+          <section>
+            <h4>Arithmetic Operators in Python</h4>
+            <img src="https://i.imgur.com/j1AVmXf.png" />
+          </section>
+
+          <section>
+            <h5>Order of execution matters!</h5>
+            <p class="fragment">1. Paranthesis</p>
+            <p class="fragment">2. Exponentiation</p>
+            <p class="fragment">3. Multiplication/Division</p>
+            <p class="fragment">4. Addition/ Subtraction</p>
+            <p class="fragment">5. Left to right</p>
+          </section>
+
+          <section>
+            <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo" title="Python Playground" frameborder="0" allow="clipboard-write" sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-    popups-to-escape-sandbox"></iframe>
+          </section>
+
+          <section>
+            <h5>String Operators in Python</h5>
+            <pre><code class="hljs python" data-line-numbers data-trim>
+fruit = 'apple'             # assignment
+
+fruit = fruit + ' banana'   # concatenation
+
+fruit += ' banana'          # concatenation shorthand
+
+fruits = fruit * 3          # repetition
+
+apple = fruit[0:6]          # slicing
+
+fruit == apple              # comparison
+
+apple in fruits             # membership
+            </code></pre>
+          </section>
+
+          <section>
+            <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo" title="Python Playground" frameborder="0" allow="clipboard-write" sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-    popups-to-escape-sandbox"></iframe>
+          </section>
+
+          <section>
+            <h5>String Formatting</h5>
+            <pre><code class="hljs python" data-line-numbers data-trim>
+s = 'My favorite fruit is _____'
+
+
+s = 'My favorite fruit is {}'.format('apple')
+
+
+s = 'My favorite {} is {}'.format('vegetable', 'tomato')
+            </code></pre>
+          </section>
+
+          <section>
+            <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo" title="Python Playground" frameborder="0" allow="clipboard-write" sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-    popups-to-escape-sandbox"></iframe>
+          </section>
+
+          <section>
+            <h5>Special Characters</h5>
+            <img src="https://i.imgur.com/skL7AnY.png" />
+          </section>
+
+          <section>
+            <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo" title="Python Playground" frameborder="0" allow="clipboard-write" sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-    popups-to-escape-sandbox"></iframe>
+          </section>
+
+          <section>
+            <h5>Multiline String</h5>
+            <img src="https://i.imgur.com/sAN8f6s.png" />
+          </section>
+
+          <section>
+            <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo" title="Python Playground" frameborder="0" allow="clipboard-write" sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-    popups-to-escape-sandbox"></iframe>
+          </section>
+
+
+          <section>
+            <h4>Other Operators in Python</h4>
+            <p class="fragment">Assignment</p>
+            <p class="fragment">Boolean/ Logical</p>
+            <p class="fragment">Membership</p>
+            <p class="fragment"></p>
+            <p class="fragment"></p>
+          </section>
+
+          <section>
+            <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo" title="Python Playground" frameborder="0" allow="clipboard-write" sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-    popups-to-escape-sandbox"></iframe>
+          </section>
+        </section>
+
+        <section>
+
+          <section>
+            <h5>Program Flow</h5>
+            <p>
+              Like a recipe or installation instructions, a program is a sequence of steps to be done in order.</br>
+            </p>
+              <ul>
+                <li>Some steps are conditional - they may be skipped</li>
+                <li>Sometimes a step or group of steps is repeated</li>
+                <li>Sometimes we store a set of steps to be used over and over as needed in several places throughout the program (functions)</li>
+              </ul>
+          </section>
+
+          <section>
+            <h5></h5>
+            <img src="https://i.imgur.com/QKW1ON8.png" />
+          </section>
+
+          <section>
+            <h5></h5>
+            <img src="https://i.imgur.com/HDgYr0P.png" />
+          </section>
+
+          <section>
+            <h5></h5>
+            <img src="https://i.imgur.com/K68IJJ2.png" />
+          </section>
+
+          <section>
+            <h5></h5>
+            <img src="https://i.imgur.com/Sb4kJmh.png" />
+          </section>
+
+          <section>
+            <h5></h5>
+            <img src="https://i.imgur.com/E5gMyoh.png" />
+          </section>
+
+          <section>
+            <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo" title="Python Playground" frameborder="0" allow="clipboard-write" sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-    popups-to-escape-sandbox"></iframe>
+          </section>
+
+        </section>
+
+
+        <section>
+          <h5>Reminder</h5>
+          <p class="fragment"><a href="https://www.py4e.com/book.php" target="_blank">Py4E book</a> is available online</p>
+          <p class="fragment">Trinket.io hosted <a href="https://books.trinket.io/pfe/" target="_blank">a variety of interactive examples</a> from the book</p>
+          <p class="fragment">Dr. Chuck has <a href="https://www.youtube.com/playlist?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p" target="_blank">a video playlist</a> for each chapter of the book</p>
+        </section>
+
+
+
+        <!-- BREAK -->
+        <!-- BREAK -->
+        <!-- BREAK -->
         <section>
           <h5>Break</h5>
           <p class="fragment">short 5-10 minute break</p>
         </section>
+        <!-- BREAK -->
+        <!-- BREAK -->
+        <!-- BREAK -->
+
+
+
 
         <section>
           <section>
-            <h5>Software Lightning  Round</h5>
-            <p class="fragment">Everything you need for this course</p>
-          </section>
+            <h5>Conditional Execution</h5>
+            <p>
+            So far we’ve seen Python execute lines in order</br>
+              One line of code after the next, whether in the interpreter or from a file
+            </p>
 
-          <section>
-            <h5>laptop</h5>
-            <p class="fragment">Windows/Mac/Linux - they all support a type of a native "command line" interface, for example:</p>
-            <iframe loading="lazy" width="100%" height="400" src="https://hackertyper.net/" title="Hacker Typer" frameborder="0" allow="clipboard-write" sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
-          </section>
+              <pre><code class="hljs python" data-line-numbers data-trim>
+  x = "10"
+  y = x + "1"
+  print (y)
+              </code></pre>
 
-          <section>
-            <h5>text editor</h5>
             <p class="fragment">
-              <a href="https://www.jetbrains.com/pycharm/download" target="_blank">PyCharm</a>
+            Conditional execution allows you to say</br>
+            <b><em>"Only if this is true, do that"</em></b></br>
+            But how do we know if something is true?
             </p>
-            <p class="fragment">
-              <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
-            </p>
-            <p class="fragment">Vim/Emacs/Nano?</p>
           </section>
 
           <section>
-            <h5>Python interpreter (v3.X)</h5>
-            <p class="fragment">Is Python installed</p>
-            <p class="fragment">Which version of python do you have? (v3.X)</p>
+            <img src="https://i.imgur.com/hrRZ1NM.png" />
           </section>
 
           <section>
-            <h5>web browser</h5>
-            <p class="fragment">Chrome</p>
-            <p class="fragment">Firefox<p>
-            <p class="fragment">Edge</p>
+            <h5>Comparison Operators (review)</h5>
+            <img src="https://i.imgur.com/GvuTws2.png" />
           </section>
+
+          <section>
+            <h5>Truth Tables</h5>
+            <img src="https://i.imgur.com/5D6M7xz.png" />
+          </section>
+
+          <section>
+            <h5>Variable evaluation to boolean</h5>
+            <img src="https://i.imgur.com/2LNix53.png" />
+          </section>
+
+          <section>
+            <img src="" />
+          </section>
+
+          <section>
+            <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo" title="Python Playground" frameborder="0" allow="clipboard-write" sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-    popups-to-escape-sandbox"></iframe>
+          </section>
+
+
         </section>
 
-        <section>
-          <section>
-            <h5>Python Fundamentals</h5>
-            <p class="fragment">Data types</p>
-          </section>
 
-          <section>
-            <h5>Data types</h5>
-            <p class="fragment">string</p>
-            <p class="fragment">int / float</p>
-          </section>
 
-          <section>
-            <h5>Data structures</h5>
-            <p class="fragment">list / tuple / set</p>
-            <p class="fragment">object / dictionary</p>
-            <p class="fragment">custom objects / custom data types</p>
-          </section>
 
-          <section>
-            <h5>Data flow through various scopes</h5>
-            <p class="fragment">Example: Lab 1 </br>
-              <a href="https://classroom.github.com/assignment-invitations/83a2c630f3ab00fac1ff1ff67c9ab5d7" target="_blank">https://classroom.github.com/assignment-invitations/83a2c630f3ab00fac1ff1ff67c9ab5d7</a>
-            </p>
-          </section>
 
-          <section>
-            <h5>Another example:</h5>
-            <p class="fragment">Control Sequences: </br>
-              <img src="https://i.imgur.com/2gcbr6D.png" />
-            </p>
-          </section>
 
-          <section>
-            <h5>Everything else: libraries</h5>
-          </section>
-        </section>
 
-        <section>
-          <h5>Lab 1 - Assignment</h5>
-          <p class="fragment"><a href="https://github.com/" target="_blank">Create a github account</a></p>
-          <p class="fragment">Submit assignments through github classroom</p>
-          <p class="fragment">Deadline for assignments is the start of next lecture (not lab!)</p>
-        </section>
 
+
+
+        <!-- LAST SLIDE -->
+        <!-- LAST SLIDE -->
+        <!-- LAST SLIDE -->
         <section>
           <h5>The End</h5>
           <p class="fragment">Any questions?</p>
         </section>
+        <!-- LAST SLIDE -->
+        <!-- LAST SLIDE -->
+        <!-- LAST SLIDE -->
       </div>
     </div>
 
