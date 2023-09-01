@@ -49,10 +49,14 @@
                 Slides are hosted on <a href="dsci.isi.edu/slides/3/" target="_blank">dsci.isi.edu/slides/3/</a>
             </p>
             <p class="fragment">
-                When sharing your code with us on <a href="https://piazza.com/usc/fall2023/dsci510fall23gleb" target="_blank">Piazza</a>, make sure it's shared privately by setting the visibility<br/> (i.e. only share with the instructors)
+                When sharing your code with us on <a href="https://piazza.com/usc/fall2023/dsci510fall23gleb"
+                                                     target="_blank">Piazza</a>, make sure it's shared privately by
+                setting the visibility<br/> (i.e. only share with the instructors)
             </p>
             <p class="fragment">
-                Use <a href="https://dpaste.net" target="_blank">https://dpaste.net</a> or <a href="https://bpa.st/+python" target="_blank">https://bpa.st/+python</a> for python code (includes syntax highlighting)
+                Use <a href="https://dpaste.net" target="_blank">https://dpaste.net</a> or <a
+                    href="https://bpa.st/+python" target="_blank">https://bpa.st/+python</a> for python code (includes
+                syntax highlighting)
             </p>
         </section>
 
@@ -92,6 +96,145 @@
                         sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-    popups-to-escape-sandbox"></iframe>
             </section>
         </section>
+
+
+        <section>
+
+            <section>
+                <h5>While loop</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+n = 5
+
+while n > 0:
+    print(n)
+    n = n - 1
+
+print('Blastoff!')
+                </code></pre>
+
+            </section>
+
+            <section>
+
+                <iframe width="800" height="500" frameborder="0"
+                        src="https://pythontutor.com/iframe-embed.html#code=n%20%3D%205%0A%0Awhile%20n%20%3E%200%3A%0A%20%20%20%20print%28n%29%0A%20%20%20%20n%20%3D%20n%20-%201%0A%20%20%20%20%0Aprint%28'Blastoff!'%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"></iframe>
+            </section>
+
+            <section>
+                <h5>While loop</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+n = 5
+
+while n > 0:
+    print(n)
+
+print('Blastoff!')
+                </code></pre>
+
+            </section>
+
+            <section>
+                <iframe width="800" height="500" frameborder="0"
+                        src="https://pythontutor.com/iframe-embed.html#code=n%20%3D%205%0A%0Awhile%20n%20%3E%200%3A%0A%20%20%20%20print%28n%29%0A%20%20%20%20%0Aprint%28'Blastoff!'%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"></iframe>
+            </section>
+
+            <section>
+                <h5>Infinite loop</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+n = 5
+
+while True:
+    print(n)
+
+print('Done')
+                </code></pre>
+
+            </section>
+
+
+            <section>
+                <img src="https://i.imgur.com/fsKFyse.png"/>
+            </section>
+            <section>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Aerial_view_of_Apple_Park_dllu.jpg/1920px-Aerial_view_of_Apple_Park_dllu.jpg"/>
+            </section>
+
+            <section>
+                <h5>Infinite Loop</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+while True:
+    line = input('> ')
+    if line == 'done':
+        break
+    print(line)
+
+print('Done!')
+                </code></pre>
+            </section>
+
+            <section>
+                <h5>Infinite Loop</h5>
+                <iframe src="https://trinket.io/embed/python3/d2e7ea772a" width="100%" height="356" frameborder="0"
+                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
+            <section>
+                <h5>Skipping Iterations</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+while True:
+    line = input('> ')
+    if line[0] == '#':
+        continue
+    if line == 'done':
+        break
+    print(line)
+
+print('Done!')
+                </code></pre>
+
+            </section>
+
+            <section>
+                <iframe src="https://trinket.io/embed/python3/d86333546b" width="100%" height="356" frameborder="0"
+                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
+        </section>
+
+        <section>
+            <h5>Types of loops</h5>
+            <p>In summary, there are three types of loops:</p>
+            <ol style="float: left; padding-left: 1em">
+                <li>Indeterminate</li>
+                <li>Determinate</li>
+                <li>Infinite</li>
+            </ol>
+        </section>
+
+
+        <section>
+            <h5>Reminder</h5>
+            <p class="fragment"><a href="https://www.py4e.com/book.php" target="_blank">Py4E book</a> is available
+                online</p>
+            <p class="fragment">Trinket.io hosted <a href="https://books.trinket.io/pfe/" target="_blank">a variety of
+                interactive examples</a> from the book</p>
+            <p class="fragment">Dr. Chuck has <a
+                    href="https://www.youtube.com/playlist?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p" target="_blank">a
+                video playlist</a> for each chapter of the book</p>
+        </section>
+
+
+        <!-- BREAK -->
+        <!-- BREAK -->
+        <!-- BREAK -->
+        <section>
+            <h5>Break</h5>
+            <p class="fragment">short 5-10 minute break</p>
+        </section>
+        <!-- BREAK -->
+        <!-- BREAK -->
+        <!-- BREAK -->
 
 
         <section>
@@ -138,39 +281,7 @@ s = 'My favorite {} is {}'.format('vegetable', 'tomato')
                 <!-- include example of a proper docstring -->
             </section>
 
-            <section>
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-    popups-to-escape-sandbox"></iframe>
-            </section>
-
         </section>
-
-
-        <section>
-            <h5>Reminder</h5>
-            <p class="fragment"><a href="https://www.py4e.com/book.php" target="_blank">Py4E book</a> is available
-                online</p>
-            <p class="fragment">Trinket.io hosted <a href="https://books.trinket.io/pfe/" target="_blank">a variety of
-                interactive examples</a> from the book</p>
-            <p class="fragment">Dr. Chuck has <a
-                    href="https://www.youtube.com/playlist?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p" target="_blank">a
-                video playlist</a> for each chapter of the book</p>
-        </section>
-
-
-        <!-- BREAK -->
-        <!-- BREAK -->
-        <!-- BREAK -->
-        <section>
-            <h5>Break</h5>
-            <p class="fragment">short 5-10 minute break</p>
-        </section>
-        <!-- BREAK -->
-        <!-- BREAK -->
-        <!-- BREAK -->
-
-
 
 
         <!-- LAST SLIDE -->
