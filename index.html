@@ -65,17 +65,57 @@
         </section>
 
         <section>
+            <h5>Reminder - Final Project</h5>
+            <ol style="float: left">
+                <li>Find data (from multiple sources)</li>
+                <li>Analyze data (clean up data first)</li>
+                <li>Visualize the results (correlation)</li>
+            </ol>
+        </section>
+
+        <section>
+            <h5>Reminder - Final Project</h5>
+            <ol style="float: left">
+                <li>get_data.py</li>
+                <li>analyze.py</li>
+                <li>visualize.py</li>
+            </ol>
+        </section>
+
+        <section>
+            <h5>Review - Functions</h5>
+            <pre><code class="hljs python" data-line-numbers data-trim>
+import requests
+
+url = 'https://data-collection.com/api?page_num=1'
+
+def get_data(url=None):
+    if not url:
+        print('Please enter a valid url')
+    else:
+        response = requests.get(url)
+        data = response.json()
+        return data
+
+get_data(url)
+            </code></pre>
+        </section>
+
+        <section>
             <h5>Reminder</h5>
             <ul>
-                <li class="fragment"><a href="https://www.py4e.com/book.php" target="_blank">Py4E book</a> is available
+                <li class="fragment"><a href="https://www.py4e.com/book.php" target="_blank">Py4E book</a> is
+                    available
                     online
                 </li>
-                <li class="fragment">Trinket.io hosted <a href="https://books.trinket.io/pfe/" target="_blank">a variety
+                <li class="fragment">Trinket.io hosted <a href="https://books.trinket.io/pfe/" target="_blank">a
+                    variety
                     of
                     interactive examples</a> from the book
                 </li>
                 <li class="fragment">Dr. Chuck has <a
-                        href="https://www.youtube.com/playlist?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p" target="_blank">a
+                        href="https://www.youtube.com/playlist?list=PLlRFEj9H3Oj7Bp8-DfGpfAfDBiblRfl5p"
+                        target="_blank">a
                     video playlist</a> for each chapter of the book
                 </li>
             </ul>
@@ -582,7 +622,8 @@ elif word > 'banana':
 
             <section>
                 <h5>Built-in functions</h5>
-                <p>For example <em><b>title</b></em>, <em><b>capitalize</b></em>, <em><b>upper</b></em>, <em><b>find</b></em>,
+                <p>For example <em><b>title</b></em>, <em><b>capitalize</b></em>, <em><b>upper</b></em>,
+                    <em><b>find</b></em>,
                     <em><b>strip</b></em>, etc.</p>
                 <pre><code class="hljs python" data-line-numbers data-trim>
 word = 'apple'
@@ -604,7 +645,8 @@ dir(word)
 
             <section>
                 <h5>Parsing strings</h5>
-                <p>For example <em><b>title</b></em>, <em><b>capitalize</b></em>, <em><b>upper</b></em>, <em><b>find</b></em>,
+                <p>For example <em><b>title</b></em>, <em><b>capitalize</b></em>, <em><b>upper</b></em>,
+                    <em><b>find</b></em>,
                     <em><b>strip</b></em>, etc.</p>
                 <pre><code class="hljs python" data-line-numbers data-trim>
 email_address = 'gleb@isi.edu'
@@ -618,7 +660,8 @@ print(name)
 
             <section>
                 <h5>Parsing strings</h5>
-                <p>For example <em><b>title</b></em>, <em><b>capitalize</b></em>, <em><b>upper</b></em>, <em><b>find</b></em>,
+                <p>For example <em><b>title</b></em>, <em><b>capitalize</b></em>, <em><b>upper</b></em>,
+                    <em><b>find</b></em>,
                     <em><b>strip</b></em>, etc.</p>
                 <pre><code class="hljs python" data-line-numbers data-trim>
 email_address = 'gleb@isi.edu'
