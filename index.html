@@ -84,7 +84,7 @@
 
         <section>
             <h5>Review - Functions</h5>
-            <pre><code class="hljs python" data-line-numbers data-trim>
+            <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 import requests
 
 url = 'https://data-collection.com/api?page_num=1'
@@ -156,7 +156,7 @@ get_data(url)
             <section>
                 <h5>Quick review of variable assignment</h5>
                 <p>Assignment is executed from right to left</p>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
                     x = 5
                     x = x + 1
 
@@ -166,7 +166,7 @@ get_data(url)
 
             <section>
                 <h5>Assigning values to variables</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
                     x = x + 1
 
                     print(x)
@@ -188,7 +188,7 @@ get_data(url)
 
             <section>
                 <h5>While loop</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 n = 5
 
 while n > 0:
@@ -208,7 +208,7 @@ print('Blastoff!')
 
             <section>
                 <h5>While loop</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 n = 5
 
 while n > 0:
@@ -226,7 +226,7 @@ print('Blastoff!')
 
             <section>
                 <h5>Infinite loop</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 n = 5
 
 while True:
@@ -246,7 +246,7 @@ print('Done')
 
             <section>
                 <h5>Infinite Loop</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 while True:
     line = input('> ')
     if line == 'done':
@@ -265,7 +265,7 @@ print('Done!')
 
             <section>
                 <h5>Skipping Iterations</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 
 while True:
     line = input('> ')
@@ -295,7 +295,7 @@ print('Done!')
 
             <section>
                 <h5>For Loop Syntax </h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 
 friends = ['Joseph', 'Glenn', 'Sally']
 
@@ -308,7 +308,7 @@ print('Done!')
 
             <section>
                 <h5>Iteration Variable</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 
 count = 0
 
@@ -321,7 +321,7 @@ print('Count: ', count)
 
             <section>
                 <h5>Summing up while iterating</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 total = 0
 
 for number in [3, 41, 12, 9, 74, 15]:
@@ -333,7 +333,7 @@ print('Total: ', total)
 
             <section>
                 <h5>Finding the Largest Value</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 largest = None
 print('Before: ', largest)
 
@@ -348,7 +348,7 @@ print('Largest: ', largest)
 
             <section>
                 <h5>Finding the Smallest Value</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 smallest = None
 print('Before: ', smallest)
 
@@ -416,7 +416,7 @@ print('Smallest: ', smallest)
         <section>
             <section>
                 <h5>A string is a sequence</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 fruit = 'banana'
 
 letter = fruit[1]
@@ -444,7 +444,7 @@ print(letter)
             <section>
                 <h5>How long is a string?</h5>
                 <p>Use the built-in function `len()` to find out</p>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 fruit = 'banana'
 
 fruit_length = len(fruit)
@@ -464,7 +464,7 @@ print(fruit_length)
 
             <section>
                 <h5>Using Loops with Strings</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 fruit = 'banana'
 
 index = 0
@@ -487,7 +487,7 @@ print('Done')
                 <h5>Slicing a string</h5>
                 <p>start index is inclusive</p>
                 <p>end index is exclusive</p>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 s = 'Hello World'
 
 s1 = s[0:5]
@@ -501,7 +501,7 @@ print(s2)
             <section>
                 <h5>Slicing a string</h5>
                 <p>start and end indices are optional</p>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 s = 'Hello World'
 
 s1 = s[:5]
@@ -515,7 +515,7 @@ print(s2)
             <section>
                 <h5>Strings are immutable!</h5>
                 <p>character of an existing string can not be changed</p>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 s = 'Hello World'
 s[0] = 'J'
 
@@ -535,7 +535,7 @@ print(s)
             <section>
                 <h5>Strings are immutable!</h5>
                 <p>we can fix that using a slice + a new assignment</p>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 s = 'Hello World'
 s = 'J' + s[1:]
 
@@ -554,7 +554,7 @@ print(s)
 
             <section>
                 <h5>Strings and Loops</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 word = 'banana'
 
 count = 0
@@ -575,7 +575,7 @@ print(count)
             <section>
                 <h5>The membership operator `in`</h5>
                 <p>Evaluates to <b>True</b> if substring is found in main string</p>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 >>> 'apple' in 'pineapple'
 True
 
@@ -588,7 +588,7 @@ False
             <section>
                 <h5>String comparison</h5>
                 <p>Comparison operators work on strings, too</p>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 word = 'banana'
 
 if word == 'banana':
@@ -600,7 +600,7 @@ if word == 'banana':
             <section>
                 <h5>String comparison</h5>
                 <p>Comparison operators work on strings, too</p>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 word = 'apple'
 
 if word < 'banana':
@@ -625,7 +625,7 @@ elif word > 'banana':
                 <p>For example <em><b>title</b></em>, <em><b>capitalize</b></em>, <em><b>upper</b></em>,
                     <em><b>find</b></em>,
                     <em><b>strip</b></em>, etc.</p>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 word = 'apple'
 
 type(word)
@@ -648,7 +648,7 @@ dir(word)
                 <p>For example <em><b>title</b></em>, <em><b>capitalize</b></em>, <em><b>upper</b></em>,
                     <em><b>find</b></em>,
                     <em><b>strip</b></em>, etc.</p>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 email_address = 'gleb@isi.edu'
 
 at_index = email_address.find('@')
@@ -663,7 +663,7 @@ print(name)
                 <p>For example <em><b>title</b></em>, <em><b>capitalize</b></em>, <em><b>upper</b></em>,
                     <em><b>find</b></em>,
                     <em><b>strip</b></em>, etc.</p>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 email_address = 'gleb@isi.edu'
 
 at_index = email_address.find('@')
@@ -687,7 +687,7 @@ print(site)
 
             <section>
                 <h5>Parsing strings using `split`</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 email_address = 'gleb@isi.edu'
 
 email_parts = email_address.split('@')
@@ -706,7 +706,7 @@ print(email_parts)
 
             <section>
                 <h5>Parsing strings using `split`</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 email_address = 'gleb@isi.edu'
 email_parts = email_address.split('@')
 
@@ -729,7 +729,7 @@ print(site)
 
             <section>
                 <h5>Format operator</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 >>> koalas = 42
 
 >>> 'I have spotted %d koalas.' % koalas
@@ -739,7 +739,7 @@ print(site)
 
             <section>
                 <h5>Format operator - %</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 print('In %d years I have spotted %d %s.' % (10, 42, 'koalas'))
 
 >>>'In 10 years I have spotted 42 koalas.'
@@ -748,7 +748,7 @@ print('In %d years I have spotted %d %s.' % (10, 42, 'koalas'))
 
             <section>
                 <h5>String Formatting</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 s = 'My favorite fruit is _____'
 
 
@@ -761,7 +761,7 @@ s = 'My favorite {} is {}'.format('vegetable', 'tomato')
 
             <section>
                 <h5>F-strings in Python</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 name = "Alice"
 age = 30
 
@@ -772,7 +772,7 @@ print(f"Hello, my name is {name} and I'm {age} years old.")
 
             <section>
                 <h5>F-strings in Python</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 num_years = 10
 num_koalas = 42
 
@@ -809,7 +809,7 @@ print(f'In {num_years} years I have spotted {num_koalas} koalas.')
 
             <section>
                 <h5>Help Command</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 
 help(pow)
 
@@ -824,7 +824,7 @@ help(pow)
 
             <section>
                 <h5>Docstrings -> Help</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 def compound_interest(principal, rate, time):
     """
     Function used to calculate compound interest
