@@ -782,6 +782,24 @@ print(f'In {num_years} years I have spotted {num_koalas} koalas.')
                 </code></pre>
             </section>
 
+            <section>
+                <h5>F-strings in Python</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
+num_years = 10
+
+def get_count(animals='bears'):
+    if animals == 'bears':
+        return 15
+    elif animals == 'koalas':
+        return 42
+    0
+
+print(f"In {num_years} years I have spotted {get_count('koalas')} koalas.")
+
+>>> 'In 10 years I have spotted 42 koalas.'
+                </code></pre>
+            </section>
+
             <section data-background="#282a36">
                 <!-- Python Playground -->
                 <!-- Python Playground -->
