@@ -738,10 +738,11 @@ print(site)
             </section>
 
             <section>
-                <h5>Format operator</h5>
+                <h5>Format operator - %</h5>
                 <pre><code class="hljs python" data-line-numbers data-trim>
->>> 'In %d years I have spotted %g %s.' % (10, 42, 'koalas')
-'In 10 years I have spotted 42 koalas.'
+print('In %d years I have spotted %d %s.' % (10, 42, 'koalas'))
+
+>>>'In 10 years I have spotted 42 koalas.'
                 </code></pre>
             </section>
 
@@ -755,6 +756,29 @@ s = 'My favorite fruit is {}'.format('apple')
 
 
 s = 'My favorite {} is {}'.format('vegetable', 'tomato')
+                </code></pre>
+            </section>
+
+            <section>
+                <h5>F-strings in Python</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+name = "Alice"
+age = 30
+
+# Using f-strings
+print(f"Hello, my name is {name} and I'm {age} years old.")
+                </code></pre>
+            </section>
+
+            <section>
+                <h5>F-strings in Python</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+num_years = 10
+num_koalas = 42
+
+print(f'In {num_years} years I have spotted {num_koalas} koalas.')
+
+>>> 'In 10 years I have spotted 42 koalas.'
                 </code></pre>
             </section>
 
