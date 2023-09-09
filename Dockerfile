@@ -11,4 +11,4 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 # start the app
-CMD ["npm", "start", "--", "--host=0.0.0.0", "--port=5104"]
+CMD ["python", "-m", "http.server", "5104"]
