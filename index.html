@@ -47,58 +47,10 @@
             <ul>
                 <li class="fragment">How is everyone doing?</li>
                 <li class="fragment">
-                    Slides are hosted on <a href="https://dsci.isi.edu/slides/3/"
-                                            target="_blank">dsci.isi.edu/slides/3/</a>
-                </li>
-                <li class="fragment">
-                    When sharing your code with us on <a href="https://piazza.com/usc/fall2023/dsci510fall23gleb"
-                                                         target="_blank">Piazza</a>, make sure it's shared privately by
-                    setting the visibility<br/> (i.e. only share with the instructors)
-                </li>
-                <li class="fragment">
-                    Use <a href="https://dpaste.org" target="_blank">https://dpaste.org</a> or <a
-                        href="https://bpa.st/+python" target="_blank">https://bpa.st/+python</a> for python code
-                    (includes
-                    syntax highlighting)
+                    Slides are hosted on <a href="https://dsci.isi.edu/slides/4/"
+                                            target="_blank">dsci.isi.edu/slides/4/</a>
                 </li>
             </ul>
-        </section>
-
-        <section>
-            <h5>Reminder - Final Project</h5>
-            <ol style="float: left">
-                <li>Find data (from multiple sources)</li>
-                <li>Analyze data (clean up data first)</li>
-                <li>Visualize the results (correlation)</li>
-            </ol>
-        </section>
-
-        <section>
-            <h5>Reminder - Final Project</h5>
-            <ol style="float: left">
-                <li>get_data.py</li>
-                <li>analyze.py</li>
-                <li>visualize.py</li>
-            </ol>
-        </section>
-
-        <section>
-            <h5>Review - Functions</h5>
-            <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-import requests
-
-url = 'https://data-collection.com/api?page_num=1'
-
-def get_data(url=None):
-    if not url:
-        print('Please enter a valid url')
-    else:
-        response = requests.get(url)
-        data = response.json()
-        return data
-
-get_data(url)
-            </code></pre>
         </section>
 
         <section>
@@ -124,55 +76,50 @@ get_data(url)
         <section>
             <h5>Schedule</h5>
 
-            <p><b>Week 1</b><br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;Chapter 1. Introduction<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;Chapter 2. Variables
-            </p>
-            <p><b>Week 2</b><br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;Chapter 3. Conditionals<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;Chapter 4. Functions
-            </p>
-            <p><b>Week 3</b><br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;Chapter 5. Iteration, Loops<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;Chapter 6. Strings
-            </p>
-        </section>
+            <small style="float: left">
+                <p><b>Week 1</b><br/>
 
-        <section>
-            <h5>How to do best in this class</h5>
-            <p>There is a day between lectures and labs - use it!</p>
-            <ul style="float: left">
-                <li>Read the book chapters we covered</li>
-                <li>Practice with the exercises in the book</li>
-                <li>(Re)Watch lecture videos</li>
-                <li>Reach out with questions</li>
-                <li>Post on the Piazza</li>
-                <li class="fragment">Use lab time, use office hours</li>
-            </ul>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Chapter 1. Introduction<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Chapter 2. Variables
+                </p>
+                <p><b>Week 2</b><br/>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;Chapter 3. Conditionals<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Chapter 4. Functions
+                </p>
+                <p><b>Week 3</b><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Chapter 5. Iteration, Loops<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Chapter 6. Strings
+
+                </p>
+                <p style="color: #900"><b>Week 4</b><br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Chapter 7. Files<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;Chapter 8. Lists
+                </p>
+            </small>
         </section>
 
         <section>
 
             <section>
-                <h5>Quick review of variable assignment</h5>
-                <p>Assignment is executed from right to left</p>
+                <h5>Files</h5>
                 <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-                    x = 5
+file_handle = open('mbox.txt')
 
-                    x = x + 1
-
-                    print(x)
+print(file_handle)
                 </code></pre>
             </section>
+
 
             <section>
-                <h5>Assigning values to variables</h5>
+                <h5>Help Command</h5>
                 <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-                    x = x + 1
 
-                    print(x)
+help(open)
+
                 </code></pre>
             </section>
+
 
             <section data-background="#282a36">
                 <!-- Python Playground -->
@@ -182,227 +129,7 @@ get_data(url)
                         title="Python Playground" frameborder="0" allow="clipboard-write"
                         sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
             </section>
-        </section>
 
-
-        <section>
-            <section>
-                <h5>Iterations / Loops</h5>
-                <p>While Loops</p>
-                <p>For Loops</p>
-
-            </section>
-            <section>
-                <h5>While loop</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-n = 5
-
-while n > 0:
-    print(n)
-    n = n - 1
-
-print('Blastoff!')
-                </code></pre>
-
-            </section>
-
-            <section>
-
-                <iframe width="800" height="500" frameborder="0"
-                        src="https://pythontutor.com/iframe-embed.html#code=n%20%3D%205%0A%0Awhile%20n%20%3E%200%3A%0A%20%20%20%20print%28n%29%0A%20%20%20%20n%20%3D%20n%20-%201%0A%20%20%20%20%0Aprint%28'Blastoff!'%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"></iframe>
-            </section>
-
-            <section>
-                <h5>While loop</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-n = 5
-
-while n > 0:
-    print(n)
-
-print('Blastoff!')
-                </code></pre>
-
-            </section>
-
-            <section>
-                <iframe width="800" height="500" frameborder="0"
-                        src="https://pythontutor.com/iframe-embed.html#code=n%20%3D%205%0A%0Awhile%20n%20%3E%200%3A%0A%20%20%20%20print%28n%29%0A%20%20%20%20%0Aprint%28'Blastoff!'%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"></iframe>
-            </section>
-
-            <section>
-                <h5>Infinite loop</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-n = 5
-
-while True:
-    print(n)
-
-print('Done')
-                </code></pre>
-            </section>
-
-
-            <section>
-                <img src="https://i.imgur.com/fsKFyse.png"/>
-            </section>
-            <section>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Aerial_view_of_Apple_Park_dllu.jpg/1920px-Aerial_view_of_Apple_Park_dllu.jpg"/>
-            </section>
-
-            <section>
-                <h5>Infinite Loop</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-while True:
-    line = input('> ')
-    if line == 'done':
-        break
-    print(line)
-
-print('Done!')
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>Infinite Loop</h5>
-                <iframe src="https://trinket.io/embed/python3/d2e7ea772a" width="100%" height="356" frameborder="0"
-                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            </section>
-
-            <section>
-                <h5>Skipping Iterations</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-
-while True:
-    line = input('> ')
-    if line[0] == '#':
-        continue
-    if line == 'done':
-        break
-    print(line)
-
-print('Done!')
-                </code></pre>
-            </section>
-
-            <section>
-                <iframe src="https://trinket.io/embed/python3/d86333546b" width="100%" height="356" frameborder="0"
-                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            </section>
-
-        </section>
-
-        <section>
-            <section>
-                <h5>For Loop</h5>
-                <p>Iterate over a list, a string, a dictionary, etc.</p>
-                <p>Basically anything that's an <b><em>"iterable"</em></b></p>
-            </section>
-
-            <section>
-                <h5>For Loop Syntax </h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-
-friends = ['Joseph', 'Glenn', 'Sally']
-
-for friend in friends:
-    print('Happy New Year: ', friend)
-
-print('Done!')
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>Iteration Variable</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-
-count = 0
-
-for number in [3, 41, 12, 9, 74, 15]:
-    count = count + 1
-
-print('Count: ', count)
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>Summing up while iterating</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-total = 0
-
-for number in [3, 41, 12, 9, 74, 15]:
-    total = total + number
-
-print('Total: ', total)
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>Finding the Largest Value</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-largest = None
-print('Before: ', largest)
-
-for number in [3, 41, 12, 9, 74, 15]:
-    if largest is None or number > largest:
-        largest = number
-    print('Loop: ', number, largest)
-
-print('Largest: ', largest)
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>Finding the Smallest Value</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-smallest = None
-print('Before: ', smallest)
-
-for number in [3, 41, 12, 9, 74, 15]:
-    if smallest is None or number < smallest:
-        smallest = number
-    print('Loop: ', number, smallest)
-
-print('Smallest: ', smallest)
-                </code></pre>
-            </section>
-
-        </section>
-
-        <section>
-
-            <section>
-                <h5>Types of loops</h5>
-                <p>In summary, there are three types of loops:</p>
-                <ol style="float: left; padding-left: 1em">
-                    <li>Indeterminate</li>
-                    <li>Determinate</li>
-                    <li>Infinite</li>
-                </ol>
-            </section>
-
-            <section>
-                <h5>Loop Patterns</h5>
-                <p>Typically, there are three parts to a loops:</p>
-                <ol style="float: left; padding-left: 1em">
-                    <li>Initialization</li>
-                    <li>Computation</li>
-                    <li>Comparison</li>
-                </ol>
-            </section>
-
-            <section>
-                <h5>Loop Terminology</h5>
-                <ul>
-                    <li><b>initialization</b> - an assignment that gives an initial value to a variable that will be
-                        updated
-                    </li>
-                    <li><b>iteration</b> - a single cycle executing statements inside the loop</li>
-                    <li><b>counter</b> - a variable used to count the number of iterations in a loop</li>
-                    <li><b>increment</b> - an update that increases the value of a variable (often by one)</li>
-                    <li><b>decrement</b> - an update that decreases the value of a variable</li>
-                </ul>
-            </section>
 
         </section>
 
@@ -421,7 +148,7 @@ print('Smallest: ', smallest)
 
         <section>
             <section>
-                <h5>A string is a sequence</h5>
+                <h5>Lists</h5>
                 <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 fruit = 'banana'
 
@@ -438,452 +165,6 @@ print(letter)
                 <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
                         title="Python Playground" frameborder="0" allow="clipboard-write"
                         sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
-            </section>
-
-            <section>
-                <h5>A string is a sequence</h5>
-                <p>String indices must be integers</p>
-                <p>All indices are 0-based</p>
-                <img src="https://i.imgur.com/Cea9Yby.png"/>
-            </section>
-
-            <section>
-                <h5>How long is a string?</h5>
-                <p>Use the built-in function `len()` to find out</p>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-fruit = 'banana'
-
-fruit_length = len(fruit)
-
-print(fruit_length)
-                </code></pre>
-            </section>
-
-            <section data-background="#282a36">
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
-            </section>
-
-            <section>
-                <h5>Using Loops with Strings</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-fruit = 'banana'
-
-index = 0
-
-while index < len(fruit):
-    letter = fruit[index]
-    print(letter)
-    index = index + 1
-
-print('Done')
-                </code></pre>
-            </section>
-
-            <section>
-                <iframe width="800" height="500" frameborder="0"
-                        src="https://pythontutor.com/iframe-embed.html#code=fruit%20%3D%20'banana'%0A%0Aindex%20%3D%200%0A%0Awhile%20index%20%3C%20len%28fruit%29%3A%0A%20%20%20%20letter%20%3D%20fruit%5Bindex%5D%0A%20%20%20%20print%28letter%29%0A%20%20%20%20index%20%3D%20index%20%2B%201%0A%0Aprint%28'Done'%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"></iframe>
-            </section>
-
-            <section>
-                <h5>Slicing a string</h5>
-                <p>start index is inclusive</p>
-                <p>end index is exclusive</p>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-s = 'Hello World'
-
-s1 = s[0:5]
-print(s1)
-
-s2 = s[6:11]
-print(s2)
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>Slicing a string</h5>
-                <p>start and end indices are optional</p>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-s = 'Hello World'
-
-s1 = s[:5]
-print(s1)
-
-s2 = s[6:]
-print(s2)
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>Strings are immutable!</h5>
-                <p>character of an existing string can not be changed</p>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-s = 'Hello World'
-s[0] = 'J'
-
-print(s)
-                </code></pre>
-            </section>
-
-            <section data-background="#282a36">
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
-            </section>
-
-            <section>
-                <h5>Strings are immutable!</h5>
-                <p>we can fix that using a slice + a new assignment</p>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-s = 'Hello World'
-s = 'J' + s[1:]
-
-print(s)
-                </code></pre>
-            </section>
-
-            <section data-background="#282a36">
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
-            </section>
-
-            <section>
-                <h5>Strings and Loops</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-word = 'banana'
-
-count = 0
-
-for letter in word:
-    if letter == 'a':
-        count = count + 1
-
-print(count)
-                </code></pre>
-            </section>
-
-            <section>
-                <iframe width="800" height="500" frameborder="0"
-                        src="https://pythontutor.com/iframe-embed.html#code=word%20%3D%20'banana'%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Acount%20%3D%200%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Afor%20letter%20in%20word%3A%0A%20%20%20%20if%20letter%20%3D%3D%20'a'%3A%0A%20%20%20%20%20%20%20%20count%20%3D%20count%20%2B%201%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0Aprint%28count%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"></iframe>
-            </section>
-
-            <section>
-                <h5>The membership operator `in`</h5>
-                <p>Evaluates to <b>True</b> if substring is found in main string</p>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
->>> 'apple' in 'pineapple'
-True
-
->>> 'nuts' in 'pineapple'
-False
-
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>String comparison</h5>
-                <p>Comparison operators work on strings, too</p>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-word = 'banana'
-
-if word == 'banana':
-    print('All right, bananas.')
-
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>String comparison</h5>
-                <p>Comparison operators work on strings, too</p>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-word = 'apple'
-
-if word < 'banana':
-    print('Your word, ' + word + ', comes before banana.')
-elif word > 'banana':
-    print('Your word, ' + word + ', comes after banana.')
-
-                </code></pre>
-            </section>
-
-            <section data-background="#282a36">
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
-            </section>
-
-            <section>
-                <h5>Built-in functions</h5>
-                <p>For example <em><b>title</b></em>, <em><b>capitalize</b></em>, <em><b>upper</b></em>,
-                    <em><b>find</b></em>,
-                    <em><b>strip</b></em>, etc.</p>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-word = 'apple'
-
-type(word)
-
-dir(word)
-                </code></pre>
-            </section>
-
-            <section data-background="#282a36">
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
-            </section>
-
-            <section>
-                <h5>Parsing strings</h5>
-                <p>For example <em><b>title</b></em>, <em><b>capitalize</b></em>, <em><b>upper</b></em>,
-                    <em><b>find</b></em>,
-                    <em><b>strip</b></em>, etc.</p>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-email_address = 'gleb@isi.edu'
-
-at_index = email_address.find('@')
-
-name = email_address[:at_index]
-print(name)
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>Parsing strings</h5>
-                <p>For example <em><b>title</b></em>, <em><b>capitalize</b></em>, <em><b>upper</b></em>,
-                    <em><b>find</b></em>,
-                    <em><b>strip</b></em>, etc.</p>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-email_address = 'gleb@isi.edu'
-
-at_index = email_address.find('@')
-
-name = email_address[:at_index]
-print(name)
-
-site = email_address[at_index+1:]
-print(site)
-                </code></pre>
-            </section>
-
-            <section data-background="#282a36">
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
-            </section>
-
-            <section>
-                <h5>Parsing strings using `split`</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-email_address = 'gleb@isi.edu'
-
-email_parts = email_address.split('@')
-print(email_parts)
-                </code></pre>
-            </section>
-
-            <section data-background="#282a36">
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
-            </section>
-
-            <section>
-                <h5>Parsing strings using `split`</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-email_address = 'gleb@isi.edu'
-email_parts = email_address.split('@')
-
-name = email_parts[0]
-print(name)
-
-site = email_parts[1]
-print(site)
-                </code></pre>
-            </section>
-
-            <section data-background="#282a36">
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
-            </section>
-
-            <section>
-                <h5>Format operator</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
->>> koalas = 42
-
->>> 'I have spotted %d koalas.' % koalas
-'I have spotted 42 koalas.'
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>Format operator - %</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-print('In %d years I have spotted %d %s.' % (10, 42, 'koalas'))
-
->>>'In 10 years I have spotted 42 koalas.'
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>String Formatting</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-s = 'My favorite fruit is _____'
-
-
-s = 'My favorite fruit is {}'.format('apple')
-
-
-s = 'My favorite {} is {}'.format('vegetable', 'tomato')
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>F-strings in Python</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-name = "Alice"
-age = 30
-
-# Using f-strings
-print(f"Hello, my name is {name} and I'm {age} years old.")
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>F-strings in Python</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-name = "Alice"
-age = 30
-
-# Using f-strings
-print(f"Hello, my name is {name.lower()} and I'm {age} years old.")
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>F-strings in Python</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-num_years = 10
-num_koalas = 42
-
-print(f'In {num_years} years I have spotted {num_koalas} koalas.')
-
->>> 'In 10 years I have spotted 42 koalas.'
-                </code></pre>
-            </section>
-
-            <section>
-                <h5>F-strings in Python</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-num_years = 10
-
-def get_count(animals='bears'):
-    if animals == 'bears':
-        return 15
-    elif animals == 'koalas':
-        return 42
-    return 0
-
-print(f"In {num_years} years I have spotted {get_count('koalas')} koalas.")
-
->>> 'In 10 years I have spotted 42 koalas.'
-                </code></pre>
-            </section>
-
-            <section data-background="#282a36">
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-    popups-to-escape-sandbox"></iframe>
-            </section>
-
-            <section>
-                <h5>Special Characters</h5>
-                <img src="https://i.imgur.com/skL7AnY.png"/>
-            </section>
-
-            <section data-background="#282a36">
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-    popups-to-escape-sandbox"></iframe>
-            </section>
-
-            <section>
-                <h5>Multiline String</h5>
-                <img src="https://i.imgur.com/sAN8f6s.png"/>
-            </section>
-
-            <section>
-                <h5>Help Command</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-
-help(pow)
-
-                </code></pre>
-            </section>
-
-            <section data-background="#282a36">
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-    popups-to-escape-sandbox"></iframe>
-            </section>
-
-            <section>
-                <h5>Docstrings -> Help</h5>
-                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
-def compound_interest(principal, rate, time):
-    """
-    Function used to calculate compound interest
-
-    Args:
-        - principal: amount of investment
-        - rate: interest rate in percent
-        - time: number of time periods interest is paid
-
-    Returns:
-        - Final amount under compound interest
-    """
-    return principal * (pow((1 + rate / 100), time))
-
-
-help(compound_interest)
-
-                </code></pre>
-            </section>
-
-            <section data-background="#282a36">
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-    popups-to-escape-sandbox"></iframe>
             </section>
 
         </section>
