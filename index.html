@@ -141,14 +141,14 @@ get_data(url)
         <section>
             <h5>How to do best in this class</h5>
             <p>There is a day between lectures and labs - use it!</p>
-            <ul>
+            <ul style="float: left">
                 <li>Read the book chapters we covered</li>
                 <li>Practice with the exercises in the book</li>
                 <li>(Re)Watch lecture videos</li>
                 <li>Reach out with questions</li>
                 <li>Post on the Piazza</li>
+                <li class="fragment">Use lab time, use office hours</li>
             </ul>
-            <p class="fragment">Use lab time, use office hours</p>
         </section>
 
         <section>
@@ -158,6 +158,7 @@ get_data(url)
                 <p>Assignment is executed from right to left</p>
                 <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
                     x = 5
+
                     x = x + 1
 
                     print(x)
@@ -185,7 +186,12 @@ get_data(url)
 
 
         <section>
+            <section>
+                <h5>Iterations / Loops</h5>
+                <p>While Loops</p>
+                <p>For Loops</p>
 
+            </section>
             <section>
                 <h5>While loop</h5>
                 <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
@@ -773,6 +779,17 @@ print(f"Hello, my name is {name} and I'm {age} years old.")
             <section>
                 <h5>F-strings in Python</h5>
                 <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
+name = "Alice"
+age = 30
+
+# Using f-strings
+print(f"Hello, my name is {name.lower()} and I'm {age} years old.")
+                </code></pre>
+            </section>
+
+            <section>
+                <h5>F-strings in Python</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 num_years = 10
 num_koalas = 42
 
@@ -792,7 +809,7 @@ def get_count(animals='bears'):
         return 15
     elif animals == 'koalas':
         return 42
-    0
+    return 0
 
 print(f"In {num_years} years I have spotted {get_count('koalas')} koalas.")
 
