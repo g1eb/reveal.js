@@ -10,5 +10,8 @@ WORKDIR /app
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /app/node_modules/.bin:$PATH
 
-# start the app
-CMD ["python", "-m", "http.server", "5104"]
+# install server to serve our files
+RUN npm i -g serve
+
+# serve the slides using serve
+CMD ["serve", ".", "-p", "5104"]
