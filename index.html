@@ -106,6 +106,39 @@
             </section>
 
             <section>
+                <h5>What is a file?</h5>
+                <p>A file can be thought of as a sequence of lines</p>
+                <p>We will be working with these files:</p>
+                <ul>
+                    <li>
+                        <a href="https://www.py4e.com/code3/mbox.txt" target="_blank">https://www.py4e.com/code3/mbox.txt</a>
+                    </li>
+                    <li>
+                        <a href="https://www.py4e.com/code3/mbox-short.txt" target="_blank">https://www.py4e.com/code3/mbox-short.txt</a>
+                    </li>
+                </ul>
+
+                <br/><br/>
+                <a href="https://en.wikipedia.org/wiki/Mbox" target="_blank">https://en.wikipedia.org/wiki/Mbox</a>
+
+            </section>
+
+            <section>
+                <h5>What is a file?</h5>
+                <p>Here is an example snippet from that mbox.txt file:</p>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
+From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008
+Return-Path: <postmaster@collab.sakaiproject.org>
+Date: Sat, 5 Jan 2008 09:12:18 -0500
+To: source@collab.sakaiproject.org
+From: stephen.marquard@uct.ac.za
+Subject: [sakai] svn commit: r39772 - content/branches/
+
+Details: http://source.sakaiproject.org/viewsvn/?view=rev&rev=39772
+                </code></pre>
+            </section>
+
+            <section>
                 <h5>Files</h5>
                 <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 file_handle = open('mbox.txt')
@@ -136,6 +169,11 @@ help(open)
 
 
             <section>
+                <h5>Opening Files - Modes</h5>
+                <img src="https://i.imgur.com/n6ujYBd.png"/>
+            </section>
+
+            <section>
                 <h5>File Handle</h5>
                 <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bD0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSIxNiAxNiAzNTUgMTg0IiB3aWR0aD0iMzU1cHQiIGhlaWdodD0iMTg0cHQiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyI+PG1ldGFkYXRhPiBQcm9kdWNlZCBieSBPbW5pR3JhZmZsZSA2LjQuMSA8ZGM6ZGF0ZT4yMDE2LTAxLTE2IDE4OjU5OjQxICswMDAwPC9kYzpkYXRlPjwvbWV0YWRhdGE+PGRlZnM+PGZpbHRlciBpZD0iU2hhZG93IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiPjxmZUdhdXNzaWFuQmx1ciBpbj0iU291cmNlQWxwaGEiIHJlc3VsdD0iYmx1ciIgc3RkRGV2aWF0aW9uPSIxLjMwOCIvPjxmZU9mZnNldCBpbj0iYmx1ciIgcmVzdWx0PSJvZmZzZXQiIGR4PSIwIiBkeT0iMiIvPjxmZUZsb29kIGZsb29kLWNvbG9yPSJibGFjayIgZmxvb2Qtb3BhY2l0eT0iLjUiIHJlc3VsdD0iZmxvb2QiLz48ZmVDb21wb3NpdGUgaW49ImZsb29kIiBpbjI9Im9mZnNldCIgb3BlcmF0b3I9ImluIi8+PC9maWx0ZXI+PGZvbnQtZmFjZSBmb250LWZhbWlseT0iTWVubG8iIGZvbnQtc2l6ZT0iMTIiIHBhbm9zZS0xPSIyIDExIDYgOSAzIDggNCAyIDIgNCIgdW5pdHMtcGVyLWVtPSIxMDAwIiB1bmRlcmxpbmUtcG9zaXRpb249Ii02My40NzY1NjIiIHVuZGVybGluZS10aGlja25lc3M9IjQzLjk0NTMxMiIgc2xvcGU9IjAiIHgtaGVpZ2h0PSI1NDYuODc1IiBjYXAtaGVpZ2h0PSI3MjkuMDAzOSIgYXNjZW50PSI5MjguMjIyNjYiIGRlc2NlbnQ9Ii0yMzUuODM5ODQiIGZvbnQtd2VpZ2h0PSI1MDAiPjxmb250LWZhY2Utc3JjPjxmb250LWZhY2UtbmFtZSBuYW1lPSJNZW5sby1SZWd1bGFyIi8+PC9mb250LWZhY2Utc3JjPjwvZm9udC1mYWNlPjxmb250LWZhY2UgZm9udC1mYW1pbHk9IkhlbHZldGljYSBOZXVlIiBmb250LXNpemU9IjE2IiBwYW5vc2UtMT0iMiAwIDUgMyAwIDAgMCAyIDAgNCIgdW5pdHMtcGVyLWVtPSIxMDAwIiB1bmRlcmxpbmUtcG9zaXRpb249Ii0xMDAiIHVuZGVybGluZS10aGlja25lc3M9IjUwIiBzbG9wZT0iMCIgeC1oZWlnaHQ9IjUxNyIgY2FwLWhlaWdodD0iNzE0IiBhc2NlbnQ9Ijk1MS45OTU4NSIgZGVzY2VudD0iLTIxMi45OTc0NCIgZm9udC13ZWlnaHQ9IjUwMCI+PGZvbnQtZmFjZS1zcmM+PGZvbnQtZmFjZS1uYW1lIG5hbWU9IkhlbHZldGljYU5ldWUiLz48L2ZvbnQtZmFjZS1zcmM+PC9mb250LWZhY2U+PGZvbnQtZmFjZSBmb250LWZhbWlseT0iSGVsdmV0aWNhIE5ldWUiIGZvbnQtc2l6ZT0iMTQiIHBhbm9zZS0xPSIyIDAgNSAzIDAgMCAwIDIgMCA0IiB1bml0cy1wZXItZW09IjEwMDAiIHVuZGVybGluZS1wb3NpdGlvbj0iLTEwMCIgdW5kZXJsaW5lLXRoaWNrbmVzcz0iNTAiIHNsb3BlPSIwIiB4LWhlaWdodD0iNTE3IiBjYXAtaGVpZ2h0PSI3MTQiIGFzY2VudD0iOTUxLjk5NTg1IiBkZXNjZW50PSItMjEyLjk5NzQ0IiBmb250LXdlaWdodD0iNTAwIj48Zm9udC1mYWNlLXNyYz48Zm9udC1mYWNlLW5hbWUgbmFtZT0iSGVsdmV0aWNhTmV1ZSIvPjwvZm9udC1mYWNlLXNyYz48L2ZvbnQtZmFjZT48bWFya2VyIG9yaWVudD0iYXV0byIgb3ZlcmZsb3c9InZpc2libGUiIG1hcmtlclVuaXRzPSJzdHJva2VXaWR0aCIgaWQ9IkZpbGxlZEFycm93X01hcmtlciIgdmlld0JveD0iLTEgLTMgNyA2IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI2IiBjb2xvcj0iYmxhY2siPjxnPjxwYXRoIGQ9Ik0gNC44IDAgTCAwIC0xLjggTCAwIDEuOCBaIiBmaWxsPSJjdXJyZW50Q29sb3IiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjEiLz48L2c+PC9tYXJrZXI+PG1hcmtlciBvcmllbnQ9ImF1dG8iIG92ZXJmbG93PSJ2aXNpYmxlIiBtYXJrZXJVbml0cz0ic3Ryb2tlV2lkdGgiIGlkPSJGaWxsZWRBcnJvd19NYXJrZXJfMiIgdmlld0JveD0iLTYgLTMgNyA2IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI2IiBjb2xvcj0iYmxhY2siPjxnPjxwYXRoIGQ9Ik0gLTQuOCAwIEwgMCAxLjggTCAwIC0xLjggWiIgZmlsbD0iY3VycmVudENvbG9yIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9nPjwvbWFya2VyPjwvZGVmcz48ZyBzdHJva2U9Im5vbmUiIHN0cm9rZS1vcGFjaXR5PSIxIiBzdHJva2UtZGFzaGFycmF5PSJub25lIiBmaWxsPSJub25lIiBmaWxsLW9wYWNpdHk9IjEiPjx0aXRsZT5DYW52YXMgMTwvdGl0bGU+PHJlY3QgZmlsbD0id2hpdGUiIHdpZHRoPSI0ODciIGhlaWdodD0iNTAwIi8+PGc+PHRpdGxlPkxheWVyIDE8L3RpdGxlPjxnPjx4bDp1c2UgeGw6aHJlZj0iI2lkMTBfR3JhcGhpYyIgZmlsdGVyPSJ1cmwoI1NoYWRvdykiLz48L2c+PGcgaWQ9ImlkMTBfR3JhcGhpYyI+PHBhdGggZD0iTSAyMDcgMTgwIEwgMjA3IDM2IEMgMjA3IDI2LjA2NCAyNDMuMjg4IDE4IDI4OCAxOCBDIDMzMi43MTIgMTggMzY5IDI2LjA2NCAzNjkgMzYgTCAzNjkgMTgwIEMgMzY5IDE4OS45MzYgMzMyLjcxMiAxOTggMjg4IDE5OCBDIDI0My4yODggMTk4IDIwNyAxODkuOTM2IDIwNyAxODAiIGZpbGw9IndoaXRlIi8+PHBhdGggZD0iTSAyMDcgMTgwIEwgMjA3IDM2IEMgMjA3IDI2LjA2NCAyNDMuMjg4IDE4IDI4OCAxOCBDIDMzMi43MTIgMTggMzY5IDI2LjA2NCAzNjkgMzYgTCAzNjkgMTgwIEMgMzY5IDE4OS45MzYgMzMyLjcxMiAxOTggMjg4IDE5OCBDIDI0My4yODggMTk4IDIwNyAxODkuOTM2IDIwNyAxODAgTSAyMDcgMzYgQyAyMDcgNDUuOTM2IDI0My4yODggNTQgMjg4IDU0IEMgMzMyLjcxMiA1NCAzNjkgNDUuOTM2IDM2OSAzNiIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEiLz48dGV4dCB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTIgNTQpIiBmaWxsPSJibGFjayI+PHRzcGFuIGZvbnQtZmFtaWx5PSJNZW5sbyIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjUwMCIgeD0iMCIgeT0iMjUiIHRleHRMZW5ndGg9IjExNS41OTM3NSI+RnJvbSBzdGVwaGVuLm0uLjwvdHNwYW4+PHRzcGFuIGZvbnQtZmFtaWx5PSJNZW5sbyIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjUwMCIgeD0iMCIgeT0iMzkiIHRleHRMZW5ndGg9IjEyMi44MTgzNiI+UmV0dXJuLVBhdGg6ICZsdDtwLi48L3RzcGFuPjx0c3BhbiBmb250LWZhbWlseT0iTWVubG8iIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSI1MDAiIHg9IjAiIHk9IjUzIiB0ZXh0TGVuZ3RoPSIxMzcuMjY3NTgiPkRhdGU6IFNhdCwgNSBKYW4gLi48L3RzcGFuPjx0c3BhbiBmb250LWZhbWlseT0iTWVubG8iIGZvbnQtc2l6ZT0iMTIiIGZvbnQtd2VpZ2h0PSI1MDAiIHg9IjAiIHk9IjY3IiB0ZXh0TGVuZ3RoPSIxMjIuODE4MzYiPlRvOiBzb3VyY2VAY29sbC4uPC90c3Bhbj48dHNwYW4gZm9udC1mYW1pbHk9Ik1lbmxvIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNTAwIiB4PSIwIiB5PSI4MSIgdGV4dExlbmd0aD0iMTE1LjU5Mzc1Ij5Gcm9tOiBzdGVwaGVuLi4uPC90c3Bhbj48dHNwYW4gZm9udC1mYW1pbHk9Ik1lbmxvIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNTAwIiB4PSIwIiB5PSI5NSIgdGV4dExlbmd0aD0iMTM3LjI2NzU4Ij5TdWJqZWN0OiBbc2FrYWldLi4uPC90c3Bhbj48dHNwYW4gZm9udC1mYW1pbHk9Ik1lbmxvIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNTAwIiB4PSIwIiB5PSIxMDkiIHRleHRMZW5ndGg9IjEzMC4wNDI5NyI+RGV0YWlsczogaHR0cDovLi4uPC90c3Bhbj48dHNwYW4gZm9udC1mYW1pbHk9Ik1lbmxvIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0iNTAwIiB4PSIwIiB5PSIxMjMiIHRleHRMZW5ndGg9IjcuMjI0NjA5NCI+4oCmPC90c3Bhbj48L3RleHQ+PC9nPjxyZWN0IHg9IjE4IiB5PSIxOCIgd2lkdGg9IjEzNSIgaGVpZ2h0PSIxODAiIGZpbGw9IndoaXRlIi8+PHJlY3QgeD0iMTgiIHk9IjE4IiB3aWR0aD0iMTM1IiBoZWlnaHQ9IjE4MCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEiLz48dGV4dCB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMyAxNTcuNSkiIGZpbGw9ImJsYWNrIj48dHNwYW4gZm9udC1mYW1pbHk9IkhlbHZldGljYSBOZXVlIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSJibGFjayIgeD0iNDYuNSIgeT0iMTUiIHRleHRMZW5ndGg9IjEwLjM2OCI+WTwvdHNwYW4+PHRzcGFuIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2EgTmV1ZSIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iYmxhY2siIHg9IjU1LjA5MiIgeT0iMTUiIHRleHRMZW5ndGg9IjIzLjQwOCI+b3VyPC90c3Bhbj48dHNwYW4gZm9udC1mYW1pbHk9IkhlbHZldGljYSBOZXVlIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSJibGFjayIgeD0iMzEuODI4IiB5PSIzMyIgdGV4dExlbmd0aD0iMTUuNjk2Ij5QcjwvdHNwYW4+PHRzcGFuIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2EgTmV1ZSIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iYmxhY2siIHg9IjQ3LjIzNiIgeT0iMzMiIHRleHRMZW5ndGg9IjQ1LjkzNiI+b2dyYW08L3RzcGFuPjwvdGV4dD48cmVjdCB4PSIxMzUiIHk9IjM2IiB3aWR0aD0iMjciIGhlaWdodD0iMTA4IiBmaWxsPSIjMDBiZmMwIi8+PHJlY3QgeD0iMTM1IiB5PSIzNiIgd2lkdGg9IjI3IiBoZWlnaHQ9IjEwOCIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEiLz48dGV4dCB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDAgNDIpIiBmaWxsPSJibGFjayI+PHRzcGFuIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2EgTmV1ZSIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjUwMCIgeD0iMy40NDYiIHk9IjEzIiB0ZXh0TGVuZ3RoPSIxMC4xMDgiPkg8L3RzcGFuPjx0c3BhbiBmb250LWZhbWlseT0iSGVsdmV0aWNhIE5ldWUiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI1MDAiIHg9IjMuOTY0IiB5PSIyOSIgdGV4dExlbmd0aD0iOS4wNzIiPkE8L3RzcGFuPjx0c3BhbiBmb250LWZhbWlseT0iSGVsdmV0aWNhIE5ldWUiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI1MDAiIHg9IjMuNDQ2IiB5PSI0NSIgdGV4dExlbmd0aD0iMTAuMTA4Ij5OPC90c3Bhbj48dHNwYW4gZm9udC1mYW1pbHk9IkhlbHZldGljYSBOZXVlIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iNTAwIiB4PSIzLjU3MiIgeT0iNjEiIHRleHRMZW5ndGg9IjkuODU2Ij5EPC90c3Bhbj48dHNwYW4gZm9udC1mYW1pbHk9IkhlbHZldGljYSBOZXVlIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iNTAwIiB4PSI0LjYwOCIgeT0iNzciIHRleHRMZW5ndGg9IjcuNzg0Ij5MPC90c3Bhbj48dHNwYW4gZm9udC1mYW1pbHk9IkhlbHZldGljYSBOZXVlIiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iNTAwIiB4PSI0LjIyMyIgeT0iOTMiIHRleHRMZW5ndGg9IjguNTU0Ij5FPC90c3Bhbj48L3RleHQ+PHBhdGggZD0iTSAxNzQuOSA5MCBMIDE3Ny43NSA5MCBMIDE3Ny43NSA5OSBMIDE3Ny43NSAxMDggTCAxOTEuMSAxMDggTCAxOTQuMSAxMDgiIG1hcmtlci1lbmQ9InVybCgjRmlsbGVkQXJyb3dfTWFya2VyKSIgbWFya2VyLXN0YXJ0PSJ1cmwoI0ZpbGxlZEFycm93X01hcmtlcl8yKSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiLz48cmVjdCB4PSI3MiIgeT0iMzYiIHdpZHRoPSI2MyIgaGVpZ2h0PSIyNyIgZmlsbD0id2hpdGUiLz48cmVjdCB4PSI3MiIgeT0iMzYiIHdpZHRoPSI2MyIgaGVpZ2h0PSIyNyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEiLz48dGV4dCB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3NyA0MC41KSIgZmlsbD0iYmxhY2siPjx0c3BhbiBmb250LWZhbWlseT0iSGVsdmV0aWNhIE5ldWUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI1MDAiIGZpbGw9ImJsYWNrIiB4PSI4LjQyIiB5PSIxNSIgdGV4dExlbmd0aD0iMzYuMTYiPm9wZW48L3RzcGFuPjwvdGV4dD48cmVjdCB4PSI3MiIgeT0iNjMiIHdpZHRoPSI2MyIgaGVpZ2h0PSIyNyIgZmlsbD0id2hpdGUiLz48cmVjdCB4PSI3MiIgeT0iNjMiIHdpZHRoPSI2MyIgaGVpZ2h0PSIyNyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEiLz48dGV4dCB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3NyA2Ny41KSIgZmlsbD0iYmxhY2siPjx0c3BhbiBmb250LWZhbWlseT0iSGVsdmV0aWNhIE5ldWUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI1MDAiIHg9IjcuNTQiIHk9IjE1IiB0ZXh0TGVuZ3RoPSIzNy45MiI+Y2xvc2U8L3RzcGFuPjwvdGV4dD48cmVjdCB4PSI3MiIgeT0iOTAiIHdpZHRoPSI2MyIgaGVpZ2h0PSIyNyIgZmlsbD0id2hpdGUiLz48cmVjdCB4PSI3MiIgeT0iOTAiIHdpZHRoPSI2MyIgaGVpZ2h0PSIyNyIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEiLz48dGV4dCB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3NyA5NC41KSIgZmlsbD0iYmxhY2siPjx0c3BhbiBmb250LWZhbWlseT0iSGVsdmV0aWNhIE5ldWUiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI1MDAiIHg9IjEwLjY0NCIgeT0iMTUiIHRleHRMZW5ndGg9IjUuMzI4Ij5yPC90c3Bhbj48dHNwYW4gZm9udC1mYW1pbHk9IkhlbHZldGljYSBOZXVlIiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iNTAwIiB4PSIxNS42ODQiIHk9IjE1IiB0ZXh0TGVuZ3RoPSIyNi42NzIiPmVhZDwvdHNwYW4+PC90ZXh0PjxyZWN0IHg9IjcyIiB5PSIxMTciIHdpZHRoPSI2MyIgaGVpZ2h0PSIyNyIgZmlsbD0id2hpdGUiLz48cmVjdCB4PSI3MiIgeT0iMTE3IiB3aWR0aD0iNjMiIGhlaWdodD0iMjciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzcgMTIxLjUpIiBmaWxsPSJibGFjayI+PHRzcGFuIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2EgTmV1ZSIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9IjUwMCIgeD0iOS4xOCIgeT0iMTUiIHRleHRMZW5ndGg9IjM0LjY0Ij53cml0ZTwvdHNwYW4+PC90ZXh0PjwvZz48L2c+PC9zdmc+Cg=="/>
             </section>
@@ -162,7 +200,14 @@ file_handle = open('stuff.txt')
                         marginwidth="0" marginheight="0" allowfullscreen></iframe>
             </section>
 
+            <section>
+                <h5>Opening Files - MBox Example</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
+file_handle = open('data/mbox.txt')
 
+dir(file_handle)
+                </code></pre>
+            </section>
 
             <section data-background="#282a36">
                 <!-- Python Playground -->
