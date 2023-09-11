@@ -297,6 +297,23 @@ dir(file_handle)
 
 
         <section>
+
+            <section>
+                <h5>Lists</h5>
+                <p>Two different things we've been talking about so far</p>
+                <ul>
+                    <li class="fragment ">
+                        <b>Algorithms</b><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;A set of rules or steps used to solve a problem
+                    </li>
+                    <br/>
+                    <li class="fragment">
+                        <b>Data Structures</b><br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;A particular way of organizing data
+                    </li>
+                </ul>
+            </section>
+
             <section>
                 <h5>What are Lists?</h5>
                 <p>A list is a sequence type data structure</p>
@@ -307,6 +324,7 @@ dir(file_handle)
 
             <section>
                 <h5>Lists are mutable - aka "changeable"</h5>
+                <p>As opposed to strings, strings are not mutable</p>
                 <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 arr = ['eggs', 'milk', 'apples', 2, 5.7, [10, 20]]
 
@@ -316,13 +334,10 @@ print(arr)
                 </code></pre>
             </section>
 
-            <section data-background="#282a36">
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <section>
+                <h5>Lists are mutable - aka "changeable"</h5>
+                <iframe src="https://trinket.io/embed/python3/a06132bf1c" width="100%" height="600" frameborder="0"
+                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
             </section>
 
             <section>
@@ -348,13 +363,10 @@ for item in shopping_cart:
                 </code></pre>
             </section>
 
-            <section data-background="#282a36">
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <section>
+                <h5>Lists and Loops</h5>
+                <iframe src="https://trinket.io/embed/python3/e2f752c2ec?runMode=console" width="100%" height="600"
+                        frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
             </section>
 
 
@@ -365,13 +377,9 @@ help(range)
                 </code></pre>
             </section>
 
-            <section data-background="#282a36">
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <section>
+                <iframe src="https://trinket.io/embed/python3/a93afbe84f" width="100%" height="600" frameborder="0"
+                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
             </section>
 
             <section>
@@ -382,18 +390,29 @@ shopping_cart = ['eggs', 'milk', 'apples']
 num_items = len(shopping_cart)
 
 for index in range(num_items):
-    print(shopping_cart[index])
+    print(index+1, shopping_cart[index])
                 </code></pre>
             </section>
 
-            <section data-background="#282a36">
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <!-- Python Playground -->
-                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                        title="Python Playground" frameborder="0" allow="clipboard-write"
-                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
+            <section>
+                <iframe src="https://trinket.io/embed/python3/056af00f94" width="100%" height="600" frameborder="0"
+                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
             </section>
+
+
+            <section>
+                <h5>Built-in list functions</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
+dir([])
+                </code></pre>
+            </section>
+
+            <section>
+                <iframe src="https://trinket.io/embed/python3/d0ad656f83" width="100%" height="600" frameborder="0"
+                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
+
 
         </section>
 
