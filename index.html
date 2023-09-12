@@ -401,6 +401,8 @@ empty_list = []
 my_list = list()
 
 shopping_list = ['eggs', 'milk', 'honey']
+
+numbers_list = [x for x in range(100) if x % 2 == 0]
                 </code></pre>
             </section>
 
@@ -416,6 +418,25 @@ shopping_list.append('cookies')
 
 print(shopping_list)
 >>> ['eggs', 'milk', 'honey', 'cookies']
+                </code></pre>
+            </section>
+
+            <section>
+                <h5>List comprehension</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
+shopping_list = ['eggs', 'milk', 'honey', 'cookies']
+quantities = [12, 1, 1, 36]
+
+sorted_shopping_list = sorted([
+    (quantity, item)
+    for item, quantity
+    in zip(shopping_list, quantities)
+])
+
+print(sorted_shopping_list)
+>>> [(1, 'honey'), (1, 'milk'), (12, 'eggs'), (36, 'cookies')]
+
+
                 </code></pre>
             </section>
 
@@ -485,6 +506,7 @@ print(c)
             <section>
                 <h5>List slicing</h5>
                 <p>Very similar to how slicing works with strings</p>
+                <p>Defined as s[start:stop:step]</p>
                 <p><em>Reminder: up to but not including..</em></p>
                 <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 arr = [1, 2, 3, 4, 5, 6]
@@ -498,6 +520,31 @@ arr[3:]
 arr[::-1]
 >>> [6, 5, 4, 3, 2, 1]
                 </code></pre>
+            </section>
+
+            <section>
+                <h5>Copying lists with [:]</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
+l1 = [1, 25, 65, 34, 17, 9]
+
+l2 = l1
+
+id(l1), id(l2)
+
+l3 = l1[:]
+
+id(l3)
+
+l1 == l2 == l3 # True
+
+l1 is l2 # True
+l1 is l3 # False
+                </code></pre>
+            </section>
+
+            <section>
+                <iframe src="https://trinket.io/embed/python3/2d5fdd9a5c?runMode=console" width="100%" height="600"
+                        frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
             </section>
 
             <section>
@@ -531,6 +578,8 @@ help(range)
 
             <section>
                 <h5>The range function</h5>
+                <p>Defined as range(start, stop, step) or simply range(X)</p>
+
                 <pre><code class="hljs python" data-line-numbers data-trim contenteditable>
 shopping_list = ['eggs', 'milk', 'apples']
 
