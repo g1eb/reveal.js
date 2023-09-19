@@ -109,26 +109,99 @@
         </section>
 
         <section>
-            <h5>Review - Files</h5>
-            <p class="fragment">Use "r" mode for reading, "w" mode for writing</p>
-            <br/>
-            <p class="fragment">open() - used to open files for reading/writing</p>
-            <p class="fragment">close() - used to close files after reading/writing</p>
-            <br/>
-            <pre><code class="hljs python" data-line-numbers data-trim>
+            <section>
+                <h5>Review - Files</h5>
+                <p class="fragment">"r" - mode for reading<br/>"w" - mode for writing<br/>"a" - mode for appending</p>
+                <br/>
+                <p class="fragment">open() - used to open files for reading/writing</p>
+                <p class="fragment">close() - used to close files after reading/writing</p>
+                <br/>
+                <pre class="fragment"><code class="hljs python" data-line-numbers data-trim>
             help(open)
+                </code></pre>
+            </section>
+
+            <section data-background="#282a36">
+                <!-- Python Playground -->
+                <!-- Python Playground -->
+                <!-- Python Playground -->
+                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
+                        title="Python Playground" frameborder="0" allow="clipboard-write"
+                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h5>Review - Try/Except/Else/Finally</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+try:
+    # Some Code....
+
+except:
+    # optional block
+    # Handling of exception
+    # (if required)
             </code></pre>
-        </section>
+            </section>
 
-        <section data-background="#282a36">
-            <!-- Python Playground -->
-            <!-- Python Playground -->
-            <!-- Python Playground -->
-            <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
-                    title="Python Playground" frameborder="0" allow="clipboard-write"
-                    sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
-        </section>
+            <section>
+                <h5>Review - Try/Except/Else/Finally</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+try:
+    # Some Code....
 
+except:
+    # optional block
+    # Handling of exception
+    # (if required)
+
+else:
+    # executed if there is no exception
+
+                </code></pre>
+            </section>
+
+            <section>
+                <h5>Review - Try/Except/Else/Finally</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+try:
+    # Some Code....
+
+except:
+    # optional block
+    # Handling of exception
+    # (if required)
+
+else:
+    # executed if there is no exception
+
+finally:
+    # this part is always executed
+
+            </code></pre>
+            </section>
+
+            <section>
+                <h5>Review - Try/Except/Else/Finally</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+try:
+    file_handle = open(‘filename.txt’)
+
+except:
+    file_handle = open(‘default.txt’)
+
+else:
+    print(‘we used filename.txt’)
+
+finally:
+    for line in file_handle:
+        print(line)
+    file_handle.close()
+            </code></pre>
+            </section>
+
+        </section>
 
         <section>
             <h5>Schedule</h5>
