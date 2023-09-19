@@ -511,18 +511,134 @@ data = {}
             <section>
                 <h5>Counting values</h5>
                 <p>What is the most common word?</p>
-                <p><small>Bender?! You stole the atom. You can see how I lived before I met you. Bender, hurry! This fuel's expensive! Also, we're dying! Ummm…to eBay?
+                <p><small>Bender?! You stole the atom. You can see how I lived before I met you. Bender, hurry! This
+                    fuel's expensive! Also, we're dying! Ummm…to eBay?
 
-Oh, but you can. But you may have to metaphorically make a deal with the devil. And by "devil", I mean Robot Devil. And by "metaphorically", I mean get your coat. You, minion. Lift my arm. AFTER HIM!
+                    Oh, but you can. But you may have to metaphorically make a deal with the devil. And by "devil", I
+                    mean Robot Devil. And by "metaphorically", I mean get your coat. You, minion. Lift my arm. AFTER
+                    HIM!
 
-I'm sure those windmills will keep them cool. It's okay, Bender. I like cooking too. Fry! Quit doing the right thing, you jerk! The key to victory is discipline, and that means a well made bed. You will practice until you can make your bed in your sleep.
+                    I'm sure those windmills will keep them cool. It's okay, Bender. I like cooking too. Fry! Quit doing
+                    the right thing, you jerk! The key to victory is discipline, and that means a well made bed. You
+                    will practice until you can make your bed in your sleep.
 
-You've killed me! Oh, you've killed me! Guess again. WINDMILLS DO NOT WORK THAT WAY! GOOD NIGHT! You seem malnourished. Are you suffering from intestinal parasites? Now, now. Perfectly symmetrical violence never solved anything.
+                    You've killed me! Oh, you've killed me! Guess again. WINDMILLS DO NOT WORK THAT WAY! GOOD NIGHT! You
+                    seem malnourished. Are you suffering from intestinal parasites? Now, now. Perfectly symmetrical
+                    violence never solved anything.
 
-                    The key to victory is discipline, and that means a well made bed. You will practice until you can make your bed in your sleep. My fellow Earthicans, as I have explained in my book 'Earth in the Balance'', and the much more popular ''Harry Potter and the Balance of Earth', we need to defend our planet against pollution. Also dark wizards.
+                    The key to victory is discipline, and that means a well made bed. You will practice until you can
+                    make your bed in your sleep. My fellow Earthicans, as I have explained in my book 'Earth in the
+                    Balance'', and the much more popular ''Harry Potter and the Balance of Earth', we need to defend our
+                    planet against pollution. Also dark wizards.
                 </small></p>
                 <a href="http://fillerama.io/" target="_blank">http://fillerama.io/</a>
             </section>
+
+            <section>
+                <h5>Counting words</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+counts = dict()
+
+print('Enter a line of text:')
+line = input('')
+
+words = line.split()
+
+print('Words:', words)
+
+print('Counting...')
+for word in words:
+    counts[word] = counts.get(word,0) + 1
+print('Counts', counts)
+
+</code></pre>
+
+            </section>
+
+            <section>
+                <iframe src="https://trinket.io/embed/python3/9af3472604" width="100%" height="600" frameborder="0"
+                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
+            <section>
+                <h5>Are dictionaries iterable?</h5>
+                <p>Yes! We can iterate over a dictionary using:</p>
+                <ul>
+                    <li>dict.keys()</li>
+                    <li>dict.values()</li>
+                    <li>dict.items()</li>
+                </ul>
+            </section>
+
+            <section>
+                <h5>Are dictionaries iterable?</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+counts = {'january': 14, 'february': 10, 'march': 61}
+for key in counts:
+    print(key, counts[key])
+
+january 14
+february 10
+march 61
+</code></pre>
+
+            </section>
+
+            <section>
+                <h5>Are dictionaries iterable?</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+data = {'january': 14, 'february': 10, 'march': 61}
+for value in data.values():
+    print(value)
+
+14
+10
+61
+</code></pre>
+
+            </section>
+
+            <section>
+                <h5>Are dictionaries iterable?</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+data = {'january': 14, 'february': 10, 'march': 61}
+for key, value in data.items():
+    print(key, value)
+
+january 14
+february 10
+march 61
+</code></pre>
+
+            </section>
+
+            <section><h5>Bonus: converting to lists</h5>
+                <p>You can convert dictionary keys and values to a list in order to iterate over them with an index</p>
+
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+data = {'january': 14, 'february': 10, 'march': 61}
+
+print(list(data.keys()))
+
+print(list(data.values()))
+</code></pre>
+
+            </section>
+
+
+            <section>
+                <iframe src="https://trinket.io/embed/python3/ad099f596e?runMode=console" width="100%" height="600"
+                        frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
+            <section data-background="#000">
+                <img src="https://i.imgur.com/fIwCaHc.png"
+                     alt=""></section>
+
         </section>
 
         <!-- LAST SLIDE -->
