@@ -426,9 +426,104 @@ l = ['very', 'long', 'string']
 
         <section>
 
+            <section>
+                <h5>Dictionaries</h5>
+                <p><b>List</b>: A linear collection of values that stay in order</p>
+                <p><b>Dictionary</b>: A “bag” of values, each with its own label</p>
+            </section>
 
+            <section data-background="https://i.imgur.com/ivlGct0.jpg"></section>
+
+            <section data-background="https://i.imgur.com/loYMdsN.jpg" alt="jelly beans">
+            </section>
+
+            <section><h5>Dictionaries</h5>
+                <p>Dictionaries are Python’s most powerful data collection</p>
+                <p>Dictionaries allow us to do fast database-like operations in Python</p>
+                <p>Dictionaries have different names in different languages</p>
+                <ul>
+                    <li>Associative Arrays - Perl / PHP</li>
+                    <li>Properties or Map or HashMap - Java</li>
+                    <li>Property Bag - C# / .Net</li>
+                </ul>
+            </section>
+
+            <section><h5>Dictionaries</h5>
+                <p>Lists index their entries based on the position in the list</p>
+                <p>Dictionaries are like bags - no order (*)</p>
+                <p>So we index the things we put in the dictionary with a “lookup tag”</p>
+
+            </section>
+
+            <section>
+                <h5>Dictionaries</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+purse = dict()
+purse['money'] = 12
+purse['candy'] = 3
+purse['tissues'] = 75
+
+print(purse)
+{'money': 12, 'tissues': 75, 'candy': 3}
+
+print(purse['candy'])
+3
+
+purse['candy'] = purse['candy'] + 2
+print(purse)
+{'money': 12, 'tissues': 75, 'candy': 5}
+                                </code></pre>
+            </section>
+
+            <section>
+                <iframe src="https://trinket.io/embed/python3/0acd6858fb?runMode=console" width="100%" height="600"
+                        frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
+            <section data-background="#000"><img src="https://i.imgur.com/6jYrn79.png" alt="dictionaries"></section>
+
+            <section data-background="#000"><img src="https://i.imgur.com/RbdfFYp.png" alt=""></section>
+
+            <section><h5>Dictionary Literals</h5>
+                <p>Dictionary literals use curly braces and have a list of key : value pairs</p>
+                <p>You can create an empty dictionary using empty curly braces</p>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+data = {'january': 14, 'february': 10, 'march': 61}
+
+data = dict()
+
+data = {}
+                                                </code></pre>
+
+            </section>
+            <section data-background="#282a36">
+                <!-- Python Playground -->
+                <!-- Python Playground -->
+                <!-- Python Playground -->
+                <iframe loading="lazy" width="100%" height="400" src="https://crumb.sh/embed/F65R4QZRHmo"
+                        title="Python Playground" frameborder="0" allow="clipboard-write"
+                        sandbox="allow-scripts allow-same-origin allow-top-navigation-by-user-activation allow-popups allow-popups-to-escape-sandbox"></iframe>
+            </section>
         </section>
 
+
+        <section>
+            <section>
+                <h5>Counting values</h5>
+                <p>What is the most common word?</p>
+                <p><small>Bender?! You stole the atom. You can see how I lived before I met you. Bender, hurry! This fuel's expensive! Also, we're dying! Ummm…to eBay?
+
+Oh, but you can. But you may have to metaphorically make a deal with the devil. And by "devil", I mean Robot Devil. And by "metaphorically", I mean get your coat. You, minion. Lift my arm. AFTER HIM!
+
+I'm sure those windmills will keep them cool. It's okay, Bender. I like cooking too. Fry! Quit doing the right thing, you jerk! The key to victory is discipline, and that means a well made bed. You will practice until you can make your bed in your sleep.
+
+You've killed me! Oh, you've killed me! Guess again. WINDMILLS DO NOT WORK THAT WAY! GOOD NIGHT! You seem malnourished. Are you suffering from intestinal parasites? Now, now. Perfectly symmetrical violence never solved anything.
+
+                    The key to victory is discipline, and that means a well made bed. You will practice until you can make your bed in your sleep. My fellow Earthicans, as I have explained in my book 'Earth in the Balance'', and the much more popular ''Harry Potter and the Balance of Earth', we need to defend our planet against pollution. Also dark wizards.
+                </small></p>
+                <a href="http://fillerama.io/" target="_blank">http://fillerama.io/</a>
+            </section>
+        </section>
 
         <!-- LAST SLIDE -->
         <!-- LAST SLIDE -->
