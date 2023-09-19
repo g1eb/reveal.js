@@ -229,7 +229,6 @@ finally:
 
         </section>
 
-
         <section>
             <h5>Schedule</h5>
 
@@ -258,6 +257,93 @@ finally:
                     &nbsp;&nbsp;&nbsp;&nbsp;Chapter 10. Tuples, Sets
                 </p>
             </small>
+        </section>
+
+        <section>
+            <section>
+                <h5>Lists, Dictionaries, Tuples, Sets</h5>
+                <p>Lists enable us to store multiple values in one variable</p>
+                <p>Lists are ordered, and we can iterate through them</p>
+                <p>We can easily find and/or change a particular element</p>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+[2, 3, 51, 0]
+[[‘a’, 151], [‘z’, 23], [‘i’, -42.3]]
+[2, ‘BBC’, ‘KCRW’, [‘z’, 23]]
+
+x = [2, 3, 51, 0]
+x[2] = -23.0
+
+                </code></pre>
+            </section>
+
+            <section>
+                <img src="https://i.imgur.com/HLJ0ioz.png" alt="python building blocks"/>
+            </section>
+
+            <section>
+                <h5>List Comprehensions</h5>
+                <p>Convenient way to create a new list based on the values of an existing list</p>
+                <p>[ <b>expression</b> for <b>element</b> in <b>iterable</b> ]</p>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+>>>	[ x * x  for x in range(10) ]
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+>>>	[ [x, pow(x, 3) ]  for x in range(5) ]
+[[0, 0], [1, 1], [2, 8], [3, 27], [4, 64]]
+
+[ x * x  for x in range(10) if x % 3 == 0 ]
+[0, 9, 36, 81]
+
+                </code></pre>
+
+            </section>
+
+            <section>
+                <h5>List Comprehensions (2)</h5>
+                <p>Compare the following examples:</p>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+y = [ i * i  for i in range(10) if i % 3 == 0 ]
+
+y = []
+for i in range(10):
+    if i % 3 == 0 :
+       y.append(i*i)
+
+                </code></pre>
+
+            </section>
+
+            <section>
+                <h5>Strings and Lists</h5>
+                <p>we can split a string into elements with .split() method</p>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+long_string = 'very-long-string'
+
+delimiter = '-'
+words = long_string.split(delimiter)
+
+print(words)
+>>> ['very', 'long', 'string']
+
+                </code></pre>
+
+            </section>
+
+            <section>
+                <h5>Strings and Lists</h5>
+                <p>we can join list elements into a string with .join() method</p>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+l = ['very', 'long', 'string']
+
+'-'.join(l)
+
+>>> 'very-long-string'
+
+                </code></pre>
+
+            </section>
         </section>
 
         <!-- BREAK -->
