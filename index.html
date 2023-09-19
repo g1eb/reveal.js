@@ -204,32 +204,6 @@ finally:
         </section>
 
         <section>
-            <section>
-                <h5>Review - Shallow vs Deep copy</h5>
-                <p>sometime you need to create a copy of a list</p>
-            </section>
-
-            <section>
-                <p>this example is not a copy, both variables reference the same object</p>
-                <iframe src="https://trinket.io/embed/python3/28d77a3c77?runOption=console" width="100%" height="600"
-                        frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            </section>
-
-            <section>
-                <p>shallow copy does not copy nested items</p>
-                <iframe src="https://trinket.io/embed/python3/334b43733c?runOption=console" width="100%" height="600"
-                        frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            </section>
-
-            <section>
-                <p>deep copy copies nested items</p>
-                <iframe src="https://trinket.io/embed/python3/faab832e5f?runOption=console" width="100%" height="600"
-                        frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-            </section>
-
-        </section>
-
-        <section>
             <h5>Schedule</h5>
 
             <small style="float: left">
@@ -277,7 +251,10 @@ x[2] = -23.0
             </section>
 
             <section>
-                <img src="https://i.imgur.com/HLJ0ioz.png" alt="python building blocks"/>
+                <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*oErPCXv1PFcuuizXqGEEbw.png"
+                     alt="python building blocks"/>
+                <a href="https://medium.com/@meghamohan/mutable-and-immutable-side-of-python-c2145cf72747"
+                   target="_blank">https://medium.com/@meghamohan/mutable-and-immutable-side-of-python-c2145cf72747</a>
             </section>
 
             <section>
@@ -385,6 +362,54 @@ l = ['very', 'long', 'string']
                 <p>Sets: unordered collection of unique immutable objects</p>
 
             </section>
+        </section>
+
+        <section>
+            <section>
+                <h5>Mutable vs Immutable</h5>
+                <p>a <b>mutable</b> object can be changed after it is created, and an <b>immutable</b> object can’t</p>
+                <p><b>Mutable objects</b>:</br>
+                    list, dict, set, byte array</p>
+                <p><b>Immutable objects</b>:<br/>
+                    int, float, complex, string, tuple, frozen set, bytes</p>
+                <a href="https://medium.com/@meghamohan/mutable-and-immutable-side-of-python-c2145cf72747"
+                   target="_blank">https://medium.com/@meghamohan/mutable-and-immutable-side-of-python-c2145cf72747</a>
+            </section>
+
+            <section>
+                <h5>Mutable vs Immutable</h5>
+                <p>- Mutable vs immutable type of variable becomes important</p>
+                <p>- When dealing with functions (passing in mutable variables) and optimizing code for efficiency</p>
+                <p>- Use mutable objects when the size is going to change, e.g. lists, dictionaries, etc.</p>
+                <p>- Use immutable objects when the value should remain the same throughout the program</p>
+                <p>- Note: the “value” of an immutable object can’t change, but it’s constituent objects can</p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h5>Review - Shallow vs Deep copy</h5>
+                <p>sometimes you need to create a copy of a list</p>
+            </section>
+
+            <section>
+                <p>this example is not a copy, both variables reference the same object</p>
+                <iframe src="https://trinket.io/embed/python3/28d77a3c77?runOption=console" width="100%" height="600"
+                        frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
+            <section>
+                <p>shallow copy does not copy nested items</p>
+                <iframe src="https://trinket.io/embed/python3/334b43733c?runOption=console" width="100%" height="600"
+                        frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
+            <section>
+                <p>deep copy copies nested items</p>
+                <iframe src="https://trinket.io/embed/python3/faab832e5f?runOption=console" width="100%" height="600"
+                        frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
         </section>
 
         <!-- BREAK -->
