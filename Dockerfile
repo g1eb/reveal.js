@@ -14,4 +14,4 @@ ENV PATH /app/node_modules/.bin:$PATH
 RUN npm i -g serve
 
 # serve the slides using serve
-CMD ["serve", ".", "-p", "5105"]
+CMD ["serve", ".", "-p", "5106"]
