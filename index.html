@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -94,6 +94,32 @@
         </section>
 
         <section>
+            <h5>Reminder - Final Project</h5>
+            <p>You will need to use your Python knowledge to:</p>
+            <ul>
+                <li>
+                    Get public data from the web<br/>
+                    <small>web scraping data off websites</small><br/>
+                    <small>using an api endpoint and</small><br/>
+                    <small>using multiple sources</small>
+                </li>
+                <li>Analyze the data in a meaningful way<br/>
+                    <small>you can use libraries like pandas or numpy</small>
+                </li>
+                <li>Visualize your results in a meaningful way<br/>
+                    <small>Your visualization has to show a relation between data sources</small>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h5>Reminder - Final Project</h5>
+            <p>This of type of data you want to collect</p>
+            <p>Take a look at Google Dataset search:</p>
+            <p><a href="https://datasetsearch.research.google.com/">https://datasetsearch.research.google.com/</a></p>
+        </section>
+
+        <section>
             <h5>Midterm Exam - October 10, 4pm PT</h5>
             <ul>
                 <li class="fragment">Review lecture slides (and examples)</li>
@@ -108,6 +134,9 @@
             </ul>
         </section>
 
+        <section>
+            <h5>sample take-home test</h5>
+            <img src="https://i.imgur.com/xMIJMXo.png" alt=""/></section>
 
         <section>
             <h5>Schedule</h5>
@@ -131,6 +160,7 @@
 
                     </p>
                 </div>
+
                 <div style="float:right; margin-left: 5em">
                     <p><b>Week 4</b><br/>
                         &nbsp;&nbsp;&nbsp;&nbsp;Chapter 7. Files<br/>
@@ -146,17 +176,6 @@
                     </p>
                 </div>
             </small>
-        </section>
-
-        <section>
-            <section>
-                <h5>Review - Files</h5>
-                <p class="fragment">"r" - mode for reading<br/>"w" - mode for writing<br/>"a" - mode for appending</p>
-                <br/>
-                <p class="fragment">open() - used to open files for reading/writing</p>
-                <p class="fragment">close() - used to close files after reading/writing</p>
-                <br/>
-            </section>
         </section>
 
         <section>
@@ -189,42 +208,316 @@
             <section>
                 <h5>Counting words</h5>
                 <pre><code class="hljs python" data-line-numbers data-trim>
-counts = dict()
+def word_counts(text):
+    counts = dict()
 
-print('Enter a line of text:')
-line = input('')
+    words = text.split()
 
-words = line.split()
+    for word in words:
+        counts[word] = counts.get(word, 0) + 1
 
-print('Words:', words)
+    return counts
 
-print('Counting...')
-for word in words:
-    counts[word] = counts.get(word,0) + 1
-print('Counts', counts)
+text = input('Enter your text here: ')
+counts = word_counts(text)
+print(counts.items())
 
 </code></pre>
 
             </section>
 
             <section>
-                <iframe src="https://trinket.io/embed/python3/9af3472604" width="100%" height="600" frameborder="0"
+                <iframe src="https://trinket.io/embed/python3/e7a1924353" width="100%" height="600" frameborder="0"
+                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
+            <section>
+                <h5>Counting words</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+counts = sorted(counts.items(), key=lambda item: item[1], reverse=True)
+
+sorted_counts = dict(sorted_tuples)
+
+print(sorted_counts)
+
+</code></pre>
+
+            </section>
+
+            <section>
+                <iframe src="https://trinket.io/embed/python3/27c48d814f" width="100%" height="600" frameborder="0"
                         marginwidth="0" marginheight="0" allowfullscreen></iframe>
             </section>
 
         </section>
 
 
-        <!-- BREAK -->
-        <!-- BREAK -->
-        <!-- BREAK -->
         <section>
-            <h5>Break</h5>
-            <p>short 5-10 minute break</p>
+
+            <section>
+                <h5>Review - Files</h5>
+                <p class="fragment">"r" - mode for reading<br/>"w" - mode for writing<br/>"a" - mode for appending</p>
+                <br/>
+                <p class="fragment">open() - used to open files for reading/writing</p>
+                <p class="fragment">close() - used to close files after reading/writing</p>
+                <br/>
+            </section>
+
+            <section>
+                <h5>Review - Files</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+file_handle = open('filename.txt', 'r')
+
+content = file_handle.read()
+
+file_handle.close()
+
+</code></pre>
+            </section>
+
+            <section>
+                <h5>Review - Files</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+with open('filename.txt', 'r') as file_handle:
+    content = file_handle.read()
+
+# After this block, the file is already closed.
+
+</code></pre>
+            </section>
+
+
         </section>
+
+        <section>
+
+            <section>
+                <h5>Labs / Debugging</h5>
+                <img src="https://i.imgur.com/JlIg6xb.png"/>
+            </section>
+
+            <section>
+                <img src="https://i.imgur.com/FBG8Mb0.png" alt="">
+            </section>
+
+            <section>
+                <h5>Rubber duck debugging</h5>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Rubber_duck_assisting_with_debugging.jpg"
+                     alt="">
+                <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">https://en.wikipedia.org/wiki/Rubber_duck_debugging</a>
+            </section>
+
+        </section>
+
         <!-- BREAK -->
         <!-- BREAK -->
         <!-- BREAK -->
+        <!--        <section>-->
+        <!--            <h5>Break</h5>-->
+        <!--            <p>short 5-10 minute break</p>-->
+        <!--        </section>-->
+        <!-- BREAK -->
+        <!-- BREAK -->
+        <!-- BREAK -->
+
+        <section>
+
+            <section data-background="#000">
+                <img src="https://i.imgur.com/l0wDK62.png" alt="">
+            </section>
+
+            <section data-background="#000">
+                <img src="https://i.imgur.com/irup6a1.png" alt="">
+            </section>
+
+            <section data-background="#000">
+                <img src="https://i.imgur.com/vgxIDDi.png" alt="">
+            </section>
+
+
+            <section>
+                <img src="https://i.imgur.com/NK1sELR.png" alt="">
+            </section>
+
+            <section>
+                <img src="https://i.imgur.com/dqaXiP7.png" alt="">
+            </section>
+
+            <section>
+                <h5>Objects</h5>
+
+                <p>An object is a bit of self-contained code and data</p>
+                <p>we have been using objects already:</p>
+                <ul>
+                    <li>String Objects</li>
+                    <li>Integer objects</li>
+                    <li>Dictionary Objects</li>
+                </ul>
+
+            </section>
+
+            <section data-background="https://i.imgur.com/FtGioaB.png"></section>
+            <section>
+                <h5>Definitions</h5>
+
+                <ul>
+                    <li><b>Class</b> - a template (e.g. dog)</li>
+                    <li><b>Method</b> - a function of a class (e.g. bark())</li>
+                    <li><b>Attribute</b> - a bit of data (e.g. breed)</li>
+                    <li><b>Instance</b> - an object/instance of that class</li>
+
+                </ul>
+            </section>
+
+            <section data-background="#000">
+                <img src="https://i.imgur.com/ABX7Av2.png" alt=""/>
+            </section>
+
+            <section>
+
+                <iframe src="https://trinket.io/embed/python3/54a100e04a" width="100%" height="600" frameborder="0"
+                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
+
+            <section>
+                <iframe src="https://trinket.io/embed/python3/0da4534d99" width="100%" height="600" frameborder="0"
+                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
+            <!-- Person/Student example -->
+            <section>
+
+                <h5>Object</h5>
+
+                <img src="https://i.imgur.com/UNyil78.png" alt="" style="width: 50%">
+
+
+            </section>
+
+
+            <section>
+                <h5>Objects Example</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+class Person:
+    def __init__(self, name: str, age: int):
+        self.name = name
+        self.age = age
+
+    def get_details(self) -> str:
+        return f"Name: {self.name}, Age: {self.age}"
+
+</code></pre>
+
+            </section>
+
+            <section>
+                <h5>Objects Example</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+# Example usage:
+person = Person("John Doe", 30)
+print(person.get_details())
+</code></pre>
+
+            </section>
+
+            <section>
+                <iframe width="800" height="500" frameborder="0"
+                        src="https://pythontutor.com/iframe-embed.html#code=class%20Person%3A%0A%20%20%20%20def%20__init__%28self,%20name%3A%20str,%20age%3A%20int%29%3A%0A%20%20%20%20%20%20%20%20self.name%20%3D%20name%0A%20%20%20%20%20%20%20%20self.age%20%3D%20age%0A%20%0A%20%20%20%20def%20get_details%28self%29%20-%3E%20str%3A%0A%20%20%20%20%20%20%20%20return%20f%22Name%3A%20%7Bself.name%7D,%20Age%3A%20%7Bself.age%7D%22%0A%0Aperson%20%3D%20Person%28%22John%20Doe%22,%2030%29%0A%20%20%20%20%0Aprint%28person.get_details%28%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"></iframe>
+            </section>
+
+            <section>
+                <h5>Objects Inheritance</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+class Student(Person):
+    def __init__(self, name: str, age: int, student_id: int, course: str):
+        super().__init__(name, age)
+        self.student_id = student_id
+        self.course = course
+
+    def get_student_details(self) -> str:
+        person_details = super().get_details()
+        return f"{person_details}, Student ID: {self.student_id}, Course: {self.course}"
+</code></pre>
+            </section>
+
+
+            <section>
+                <h5>Objects Example</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+# Example usage:
+student = Student("Alice Smith", 20, 1412325523, "DSCI510")
+print(student.get_student_details())
+</code></pre>
+
+            </section>
+
+            <section>
+                <iframe width="800" height="500" frameborder="0"
+                        src="https://pythontutor.com/iframe-embed.html#code=class%20Person%3A%0A%20%20%20%20def%20__init__%28self,%20name%3A%20str,%20age%3A%20int%29%3A%0A%20%20%20%20%20%20%20%20self.name%20%3D%20name%0A%20%20%20%20%20%20%20%20self.age%20%3D%20age%0A%20%0A%20%20%20%20def%20get_details%28self%29%20-%3E%20str%3A%0A%20%20%20%20%20%20%20%20return%20f%22Name%3A%20%7Bself.name%7D,%20Age%3A%20%7Bself.age%7D%22%0A%0Aclass%20Student%28Person%29%3A%0A%20%20%20%20def%20__init__%28self,%20name%3A%20str,%20age%3A%20int,%20student_id%3A%20int,%20course%3A%20str%29%3A%0A%20%20%20%20%20%20%20%20super%28%29.__init__%28name,%20age%29%0A%20%20%20%20%20%20%20%20self.student_id%20%3D%20student_id%0A%20%20%20%20%20%20%20%20self.course%20%3D%20course%0A%20%0A%20%20%20%20def%20get_student_details%28self%29%20-%3E%20str%3A%0A%20%20%20%20%20%20%20%20person_details%20%3D%20super%28%29.get_details%28%29%0A%20%20%20%20%20%20%20%20return%20f%22%7Bperson_details%7D,%20Student%20ID%3A%20%7Bself.student_id%7D,%20Course%3A%20%7Bself.course%7D%22%0A%0A%0Astudent%20%3D%20Student%28%22Alice%20Smith%22,%2020,%201412325523,%20%22DSCI510%22%29%0Aprint%28student.get_student_details%28%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"></iframe>
+            </section>
+
+            <section>
+                <h5>Objects Example</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+class Student(Person):
+    def __init__(self, name: str, age: int, student_id: int, course: str):
+        super().__init__(name, age)
+        self.student_id = student_id
+        self.course = course
+        self.chapters_studied = 0
+
+    def get_student_details(self) -> str:
+        person_details = super().get_details()
+        return f"{person_details}, Student ID: {self.student_id}, Course: {self.course}"
+
+    def study(self, chapters: int = 1):
+        """Increment the chapters_studied counter"""
+        self.chapters_studied += chapters
+</code></pre>
+            </section>
+
+
+            <section>
+                <h5>Terminology</h5>
+                <p><b>attribute</b>
+                <small style="text-align: left;">A variable that is part of a class.</small></p>
+                <p><b>class</b>
+                <small style="text-align: left;">A template that can be used to construct an object. Defines the attributes and methods that will
+                    make up the object.</small></p>
+                <p><b>child class</b>
+                <small style="text-align: left;">A new class created when a parent class is extended. The child class inherits all of the
+                    attributes and methods of the parent class.</small></p>
+                <p><b>constructor</b>
+                <small style="text-align: left;">An optional specially named method (__init__) that is called at the moment when a class is being
+                    used to construct an object. Usually this is used to set up initial values for the object.</small></p>
+
+            </section>
+            <section>
+                <h5>Terminology</h5>
+                <p><b>inheritance</b>
+                <small style="text-align: left;">When we create a new class (child) by extending an existing class (parent). The child class has
+                    all the attributes and methods of the parent class plus additional attributes and methods defined by
+                    the child class.</small></p>
+                <p><b>method</b>
+                <small style="text-align: left;">A function that is contained within a class and the objects that are constructed from the class.
+                    Some object-oriented patterns use 'message' instead of 'method' to describe this concept.</small></p>
+                <p><b>object</b>
+                <small style="text-align: left;">A constructed instance of a class. An object contains all of the attributes and methods that were
+                    defined by the class. Some object-oriented documentation uses the term 'instance' interchangeably
+                    with 'object'.</small></p>
+                <p><b>parent class</b>
+                <small style="text-align: left;">The class which is being extended to create a new child class. The parent class contributes all
+                    of its methods and attributes to the new child class.</small></p>s
+            </section>
+
+        </section>
 
 
         <!-- LAST SLIDE -->
