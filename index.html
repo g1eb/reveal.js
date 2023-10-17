@@ -292,12 +292,6 @@
                 <a href="https://docs.python.org/3/library/socket.html">https://docs.python.org/3/library/socket.html</a>
             </section>
 
-            <section>
-                <iframe src="https://trinket.io/embed/python3/652899e822" width="100%" height="600" frameborder="0"
-                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
-
-            </section>
-
         </section>
 
 
@@ -390,8 +384,31 @@
 
             <section>
                 <h5>Web Browser</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+import socket
+
+socket_handle = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+socket_handle.connect(('data.pr4e.org', 80))
+cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
+socket_handle.send(cmd)
+
+while True:
+    data = socket_handle.recv(512)
+    if (len(data) < 1):
+        break
+    print(data.decode(),end='')
+
+socket_handle.close()
+
+                                </code></pre>
             </section>
 
+            <section>
+                <iframe src="https://trinket.io/embed/python3/652899e822" width="100%" height="600" frameborder="0"
+                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+            </section>
 
             <section>
                 <h5>urllib library</h5>
@@ -405,6 +422,11 @@
                         marginwidth="0" marginheight="0" allowfullscreen></iframe>
             </section>
 
+            <section>
+                <h5>requests library</h5>
+                <p>built on top of urllib</p>
+                <p>even more user-friendly</p>
+            </section>
 
         </section>
 
