@@ -542,7 +542,6 @@ print(counts)
         </section>
         <section>
 
-
             <section>
                 <h5>requests library</h5>
                 <p>built on top of urllib3</p>
@@ -569,6 +568,131 @@ print(counts)
 
             <section>
                 <iframe src="https://trinket.io/embed/python3/73653dcddf" width="100%" height="600" frameborder="0"
+                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
+
+            <section>
+                <h5>W3C Standards: HTML (Hypertext Markup Language)</h5>
+                <ul style="font-size: 0.75em">
+                    <li>
+                        Publish online documents with headings, text, tables, lists, photos
+                    </li>
+                    <li>
+                        Retrieve online information via hypertext links, at the click of a button.
+                    </li>
+                    <li>
+                        Design forms for conducting transactions with remote services, for use in searching for
+                        information, making reservations, ordering products, etc.
+
+                    </li>
+                    <li>
+                        Include spread-sheets, video, sound clips, and other applications in their documents.
+                    </li>
+                    <li>
+                        With HTML, authors describe the structure of pages using markup. The elements of the language
+                        label pieces of content such as “paragraph,” “list,” “table,”, etc.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h5>
+                    W3C Standards: CSS (Cascading style sheets)
+                </h5>
+                <p>language for describing the presentation of Web pages, including colors, layout, and fonts. </p>
+                <ul>
+                    <li>
+                        Can adapt presentation to different devices: large screens, small screens, printers.
+                    </li>
+                    <li>
+
+                        Separation of HTML from CSS makes it easier to maintain sites, share style sheets.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h5>Document Object Model (DOM)</h5>
+                <img src="https://i.imgur.com/cCotjn0.png" alt="">
+            </section>
+
+            <section>
+                <h5>Common HTML Tags</h5>
+                <img src="https://i.imgur.com/JWIpOSR.png" alt="">
+                <a href="https://www.w3schools.com/html/">https://www.w3schools.com/html/</a>
+            </section>
+
+            <section>
+                <h5>HTML Table Examle</h5>
+                <img src="https://i.imgur.com/2w4vMe1.png" alt="">
+            </section>
+
+        </section>
+
+        <section>
+
+            <section>
+                <h5>Beautiful Soup</h5>
+                <ul>
+                    <li>
+                        A library to extract information from html/xml strings
+                    </li>
+                    <li>
+
+                        Maps an HTML string to a DOM (Document Object Model).
+                    </li>
+                    <li>
+
+                        Then allows navigation inside that DOM.
+                    </li>
+                </ul>
+                <br/><br/>
+                <a href="https://en.wikipedia.org/wiki/Beautiful_Soup_(HTML_parser)">https://en.wikipedia.org/wiki/Beautiful_Soup_(HTML_parser)</a>
+            </section>
+            <section>
+
+                <h5>Beautiful Soup</h5>
+
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+import requests
+from bs4 import BeautifulSoup
+
+response = requests.get('https://en.wikipedia.org/wiki/List_of_spaceflight_launches_in_January%E2%80%93June_2023')
+
+soup = BeautifulSoup(response.text, 'html.parser')
+
+soup.title
+                </code></pre>
+            </section>
+
+            <section>
+                <iframe src="https://trinket.io/embed/python3/f2a8640d50?runMode=console" width="100%" height="600"
+                        frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
+            <section>
+
+                <pre><code class="hljs python" data-line-numbers data-trim>
+
+import requests
+from bs4 import BeautifulSoup
+
+response = requests.get('https://en.wikipedia.org/wiki/List_of_spaceflight_launches_in_January%E2%80%93June_2023')
+
+soup = BeautifulSoup(response.text, 'html.parser')
+
+table = soup.find('table', class_='wikitable')
+
+for row in table.find_all('tr'):
+    print(row)
+
+                </code></pre>
+            </section>
+
+            <section>
+                <iframe src="https://trinket.io/embed/python3/6a2429ce8a" width="100%" height="600" frameborder="0"
                         marginwidth="0" marginheight="0" allowfullscreen></iframe>
             </section>
 
