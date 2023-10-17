@@ -141,6 +141,10 @@
                 </div>
             </small>
         </section>
+        
+        <section>
+            <img src="https://i.imgur.com/hBaCMXf.png" alt="" width="75%">
+        </section>
 
 
         <section>
@@ -418,14 +422,15 @@ socket_handle.close()
 
             <section>
                 <h5>ASCII Characters</h5>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/USASCII_code_chart.png" alt="" width="50%">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/USASCII_code_chart.png" alt=""
+                     width="50%">
                 <a href="https://en.wikipedia.org/wiki/ASCII">https://en.wikipedia.org/wiki/ASCII</a>
             </section>
 
             <section data-background="#000">
                 <img src="https://i.imgur.com/FySjpVg.png" alt="">
             </section>
-            
+
             <section data-background="#000">
                 <img src="https://i.imgur.com/lg1eYAR.png" alt="">
                 <a href="https://en.wikipedia.org/wiki/UTF-8">https://en.wikipedia.org/wiki/UTF-8</a>
@@ -441,20 +446,61 @@ socket_handle.close()
 
         </section>
 
+
+        <section>
+
+
+        </section>
+
+
         <section>
 
 
             <section>
                 <h5>urllib library</h5>
-                <p>wrapper around the sockets</p>
-                <p>much easier to use</p>
-                <p>similar to a file handler</p>
+                <p>wrapper around the sockets implementation</p>
+                <p>much easier to use than dealing with sockets directly</p>
+                <p>similar to a file handler, e.g. opening a connection</p>
             </section>
+
+            <section>
+                <h5>URLLib example</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+import urllib.request, urllib.parse, urllib.error
+
+fhand = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
+for line in fhand:
+    print(line.decode().strip())
+                </code></pre>
+            </section>
+
 
             <section>
                 <iframe src="https://trinket.io/embed/python3/356a7045c8" width="100%" height="600" frameborder="0"
                         marginwidth="0" marginheight="0" allowfullscreen></iframe>
             </section>
+
+            <section>
+                <h5>URLLib example</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+import urllib.request, urllib.parse, urllib.error
+
+fhand = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
+
+counts = dict()
+for line in fhand:
+    words = line.decode().split()
+    for word in words:
+        counts[word] = counts.get(word, 0) + 1
+print(counts)
+                </code></pre>
+            </section>
+
+            <section>
+                <iframe src="https://trinket.io/embed/python3/c0ba2c08db" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
+            
 
             <section>
                 <h5>requests library</h5>
