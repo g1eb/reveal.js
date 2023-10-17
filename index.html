@@ -141,7 +141,7 @@
                 </div>
             </small>
         </section>
-        
+
         <section>
             <img src="https://i.imgur.com/hBaCMXf.png" alt="" width="75%">
         </section>
@@ -497,10 +497,10 @@ print(counts)
             </section>
 
             <section>
-                <iframe src="https://trinket.io/embed/python3/c0ba2c08db" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+                <iframe src="https://trinket.io/embed/python3/c0ba2c08db" width="100%" height="600" frameborder="0"
+                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
             </section>
 
-            
 
             <section>
                 <h5>requests library</h5>
@@ -508,19 +508,42 @@ print(counts)
                 <p>even more user-friendly</p>
             </section>
 
+            <section>
+                <h5>Requests example</h5>
+                <pre><code class="hljs python" data-line-numbers data-trim>
+import requests
+
+response = requests.get('http://data.pr4e.org/romeo.txt')
+
+counts = dict()
+text = request.text.split('/n')
+for line in text:
+    words = line.split()
+    for word in words:
+        counts[word] = counts.get(word, 0) + 1
+
+print(counts)
+                </code></pre>
+            </section>
+
+            <section>
+                <iframe src="https://trinket.io/embed/python3/73653dcddf" width="100%" height="600" frameborder="0"
+                        marginwidth="0" marginheight="0" allowfullscreen></iframe>
+            </section>
+
         </section>
 
 
-        <!-- BREAK -->
-        <!-- BREAK -->
-        <!-- BREAK -->
-        <section>
-            <h5>Break</h5>
-            <p>short 5-10 minute break</p>
-        </section>
-        <!-- BREAK -->
-        <!-- BREAK -->
-        <!-- BREAK -->
+        <!--        &lt;!&ndash; BREAK &ndash;&gt;-->
+        <!--        &lt;!&ndash; BREAK &ndash;&gt;-->
+        <!--        &lt;!&ndash; BREAK &ndash;&gt;-->
+        <!--        <section>-->
+        <!--            <h5>Break</h5>-->
+        <!--            <p>short 5-10 minute break</p>-->
+        <!--        </section>-->
+        <!--        &lt;!&ndash; BREAK &ndash;&gt;-->
+        <!--        &lt;!&ndash; BREAK &ndash;&gt;-->
+        <!--        &lt;!&ndash; BREAK &ndash;&gt;-->
 
 
         <!-- LAST SLIDE -->
