@@ -505,8 +505,8 @@ socket_handle.close()
                 <pre><code class="hljs python" data-line-numbers data-trim>
 import urllib.request, urllib.parse, urllib.error
 
-fhand = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
-for line in fhand:
+file_handle = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
+for line in file_handle:
     print(line.decode().strip())
                 </code></pre>
             </section>
@@ -522,10 +522,10 @@ for line in fhand:
                 <pre><code class="hljs python" data-line-numbers data-trim>
 import urllib.request, urllib.parse, urllib.error
 
-fhand = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
+file_handle = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
 
 counts = dict()
-for line in fhand:
+for line in file_handle:
     words = line.decode().split()
     for word in words:
         counts[word] = counts.get(word, 0) + 1
@@ -556,7 +556,7 @@ import requests
 response = requests.get('http://data.pr4e.org/romeo.txt')
 
 counts = dict()
-text = request.text.split('/n')
+text = response.text.split('/n')
 for line in text:
     words = line.split()
     for word in words:
