@@ -295,6 +295,32 @@
             </section>
 
             <section>
+                <h5>SQL Database Example</h5>
+                <p>Example of a SQLite database with two tables:</p>
+                <pre><code>
+CREATE TABLE Users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE Orders (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER,
+    product_name TEXT NOT NULL,
+    quantity INTEGER NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES Users(id)
+);
+            </code></pre>
+            </section>
+
+            <section>
+                <h5>SQL Database Example</h5>
+
+                <img src="https://i.imgur.com/hLjpWR8.png" alt="">
+            </section>
+
+            <section>
                 <h5>NoSQL Databases</h5>
             </section>
         </section>
