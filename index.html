@@ -627,8 +627,11 @@ CREATE TABLE Orders (
             </section>
 
             <section>
-                <img src="https://i.imgur.com/984H5wc.png" alt="">
+<!--                <img src="https://i.imgur.com/984H5wc.png" alt="">-->
+                <img src="https://i.imgur.com/wtacFIC.png" alt="">
             </section>
+            
+            
 
             <section>
                 <h5>
@@ -643,6 +646,244 @@ CREATE TABLE Orders (
                 </ul>
             </section>
 
+            <section>
+                <h5>SQL vs NOSQL</h5>
+                <p>
+                    Relational databases (RDBMS) like MySQL and NoSQL databases like MongoDB differ fundamentally in
+                    their structure, use cases, and approaches to scalability.</p>
+            </section>
+
+            <section>
+                <h5>Data Structure</h5>
+                <ul>
+                    <li>
+                        <b>Relational:</b>
+                        <ul>
+                            <li>
+                                store data in tables with rows and columns
+                            </li>
+                            <li>using predefined schemas with specific data types</li>
+                            <li>defines relationships between tables</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>NoSQL Databases:</b>
+                        <ul>
+                            <li>
+                                use a more flexible data structure
+                            </li>
+                            <li>
+                                document-oriented database (json-like)
+                            </li>
+                            <li>
+                                no predefined schemas, dynamic
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+
+            <section>
+                <h5>Schemas</h5>
+                <ul>
+                    <li>
+                        <b>Relational: </b>
+                        <ul>
+                            <li>
+                                require a predefined schemas
+                            </li>
+                            <li>
+                                alterations to schemas require migrations
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>NoSQL Databases: </b>
+                        <ul>
+                            <li>
+                                use dynamic or flexible schemas
+                            </li>
+                            <li>
+                                allow documents in the same collection to have different fields
+                            </li>
+                        </ul>
+                </ul>
+            </section>
+
+            <section>
+                <h5>Query Language</h5>
+                <ul>
+                    <li>
+                        <b>Relational:</b>
+                        <ul>
+                            <li>
+                                Structured Query Language (SQL)
+                            </li>
+                            <li>
+                                standardized across different database systems
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>NoSQL Databases:</b>
+                        <ul>
+                            <li>
+                                different language across different types of databases
+                            </li>
+                        </ul>
+                </ul>
+            </section>
+
+            <section>
+                <h5>Scalability</h5>
+                <ul>
+                    <li>
+                        <b>Relational:</b>
+                        <ul>
+                            <li>traditionally scale vertically</li>
+                            <li>adding more power (CPU, RAM, SSD) to an existing machine</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>NoSQL Databases:</b>
+                        <ul>
+                            <li>
+                                designed to scale horizontally
+                            </li>
+                            <li>
+                                using distributed clusters of hardware to manage large volumes of data and traffic
+                            </li>
+                        </ul>
+                </ul>
+            </section>
+
+            <section>
+                <h5>Use Cases</h5>
+                <ul>
+                    <li>
+                        <b>Relational:</b>
+                        <ul>
+                            <li>
+                                used when data integrity and consistency are critical
+                            </li>
+                            <li>
+                                suited for complex queries and reports
+                            </li>
+                            <li>
+                                if data is primarily structured and unchanging
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <b>NoSQL Databases:</b>
+                        <ul>
+                            <li>used for performance, scalability, and flexibility</li>
+                            <li>ideal for storing unstructured or semi-structured data</li>
+                            <li>used in development where the schema may evolve over time</li>
+                        </ul>
+                </ul>
+            </section>
+
+            <section>
+                <h5>Examples</h5>
+                <ul>
+                    <li>
+                        <b>Relational:</b>
+                        <ul>
+                            <li>
+                                financial systems
+                            </li>
+                            <li>
+                                e-commerce platforms
+                            </li>
+                            <li>
+                                other transactional systems
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <b>NoSQL Databases:</b>
+                        <ul>
+                            <li>
+                                big data applications
+                            </li>
+
+                            <li>
+                                content management systems
+                            </li>
+                            <li>
+                                mobile applications
+                            </li>
+                        </ul>
+                </ul>
+            </section>
+
+            <section>
+                <h5>JSON Document</h5>
+                <pre><code>
+{
+  "_id": "band_id",
+  "name": "Band Name",
+  "members": [
+    {
+      "_id": "artist_id",
+      "name": "Artist Name"
+    }
+    // ... other artists
+  ],
+  "albums": [
+    {
+      "_id": "album_id",
+      "title": "Album Title",
+      "tracks": [
+        {
+          "_id": "track_id",
+          "title": "Track Title",
+          "rating": 5
+        }
+        // ... other tracks
+      ]
+    }
+    // ... other albums
+  ]
+}
+                </code></pre>
+            </section>
+
+            <section>
+                <h5>JSON Document</h5>
+                <pre><code>
+// Artists Collection
+{
+  "_id": "artist_id",
+  "name": "Artist Name"
+}
+
+// Bands Collection
+{
+  "_id": "band_id",
+  "name": "Band Name",
+  "members": ["artist_id"] // Array of artist IDs
+}
+
+// Albums Collection
+{
+  "_id": "album_id",
+  "title": "Album Title",
+  "band_id": "band_id" // Reference to the Band document
+}
+
+// Tracks Collection
+{
+  "_id": "track_id",
+  "title": "Track Title",
+  "rating": 5,
+  "album_id": "album_id" // Reference to the Album document
+}
+                </code></pre>
+            </section>
 
         </section>
 
