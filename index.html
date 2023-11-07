@@ -262,9 +262,28 @@
         <section>
             <section>
                 <h5>Special Requests</h5>
-                <p>Big-O Notation</p>
                 <p>please send in your requests!</p>
+                <br/><br/>
+                <p>Today: Big-O Notation</p>
 
+            </section>
+
+            <section>
+                <h5>Why do we need this?</h5>
+                <p>Consider the following function:</p>
+                <pre><code class="hljs python language-python" data-line-numbers="" data-trim="">
+arr = [5, 2, 6, 2, 8, ..., 12]
+
+def total_sum(numbers):
+    total = 0
+    for number in numbers:
+        total += number
+    return total
+                </code></pre>
+                <ul>
+                    <li class="fragment" style="color: crimson">How much time does it take to run this function?</li>
+                    <li class="fragment" style="color: green">How does the runtime of this function grow over time?</li>
+                </ul>
             </section>
 
             <section>
@@ -286,18 +305,67 @@
                 </ul>
             </section>
 
+            <section data-background="#000">
+                <img src="https://i.imgur.com/VFrOB8X.png" alt="">
+            </section>
+
             <section>
                 <h5>Sorting Algorithms</h5>
+                <p>Runtime Complexity for:</p>
                 <ul>
-                    <li>Runtime Complexity for Linear Search – O(n)</li>
-                    <li>Runtime Complexity for Binary Search – O(log n)</li>
-                    <li>Runtime Complexity for Bubble Sort, Selection Sort, Insertion Sort, Bucket Sort - O(n^c)</li>
-                    <li>Runtime Complexity for Exponential algorithms like Tower of Hanoi - O(c^n)</li>
-                    <li>Runtime Complexity for Heap Sort, Merge Sort - O(n log n)</li>
+                    <li>Binary Search – O(log n)</li>
+                    <li>Linear Search – O(n)</li>
+                    <li>Heap Sort, Merge Sort - O(n log n)</li>
+                    <li>Bubble Sort, Selection Sort, Insertion Sort, Bucket Sort - O(n^c)</li>
+                    <li>Exponential algorithms like Tower of Hanoi - O(c^n)</li>
                 </ul>
             </section>
 
+            <section>
+                <h5>Binary Search</h5>
+                <p><b>O(log n)</b></p>
+                <p>This is because a binary search algorithm divides the data in half each time, making it very
+                    efficient for searching through sorted data.</p>
+            </section>
 
+            <section>
+                <h5>Linear Search</h5>
+                <p><b>O(n)</b></p>
+                <p>A linear search goes through each item in a list sequentially until the item is found or the end of
+                    the list is reached.</p>
+            </section>
+
+            <section>
+                <h5>Heap Sort, Merge Sort</h5>
+                <p><b>O(n log n)</b></p>
+                <p>These sorting algorithms are more efficient than simple comparison-based sorts like bubble sort
+                    because they combine elements in a divide-and-conquer approach which reduces the total number of
+                    comparisons needed.</p>
+            </section>
+
+            <section>
+                <h5>Bubble Sort, Selection Sort, Insertion Sort, Bucket Sort</h5>
+                <p><b>O(n^c)</b></p>
+                <p>The exact exponent c depends on the specific details of the algorithm and data. For Bubble,
+                    Selection, and Insertion sort, it's typically O(n^2) for average and worst cases, whereas Bucket
+                    Sort's complexity can vary depending on how the data is distributed and the number of buckets
+                    used.</p>
+            </section>
+
+            <section>
+                <h5>Exponential algorithms like Tower of Hanoi</h5>
+                <p><b>O(c^n)</b></p>
+                <p>Exponential algorithms have runtimes that grow very rapidly with the input size, making them
+                    impractical for large n. In the Tower of Hanoi, with each increase in the number of disks, the
+                    number of moves required doubles plus one additional move.</p>
+            </section>
+
+            <section>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/D6xkbGLQesk?si=fzV7ONRejt7UjoQu"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+            </section>
 
         </section>
 
@@ -538,7 +606,7 @@
             <section>
                 <h5>SQL Database Example</h5>
                 <p>Example of a SQLite database with two tables:</p>
-                <pre><code>
+                <pre><code class="hljs sql language-sql" data-line-numbers="" data-trim="">
 CREATE TABLE Users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
@@ -850,7 +918,7 @@ CREATE TABLE Orders (
 
             <section>
                 <h5>JSON Document</h5>
-                <pre><code>
+                <pre><code class="hljs json language-json" data-line-numbers="" data-trim="">
 {
   "_id": "band_id",
   "name": "Band Name",
@@ -882,7 +950,7 @@ CREATE TABLE Orders (
 
             <section>
                 <h5>JSON Document</h5>
-                <pre><code>
+                <pre><code class="hljs json language-json" data-line-numbers="" data-trim="">
 // Artists Collection
 {
   "_id": "artist_id",
