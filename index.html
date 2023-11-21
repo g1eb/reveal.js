@@ -225,6 +225,7 @@
             <section>
                 <h5>News Articles</h5>
                 <p>LexisNexis: provides journalists with a searchable database of news articles</p>
+                <a href="https://en.wikipedia.org/wiki/LexisNexis">https://en.wikipedia.org/wiki/LexisNexis</a>
                 <p>Also available to USC students through USC Libraries</p>
                 <a href="https://libraries.usc.edu/databases/lexisnexis-academic-nexis-uni">https://libraries.usc.edu/databases/lexisnexis-academic-nexis-uni</a>
             </section>
@@ -304,7 +305,38 @@
             </section>
 
             <section>
-                <h5></h5>
+                <h5>NetworkX</h5>
+                <p>NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks.</p>
+                <a href="https://networkx.org/">https://networkx.org/</a>
+            </section>
+
+            <section>
+                <h5>Create list of unique nodes</h5>
+                <pre><code class="hljs python language-python" data-line-numbers data-trim>
+nodes = pd.concat([dfg['node_1'], dfg['node_2']], axis=0).unique()
+
+nodes.shape
+                </code></pre>
+            </section>
+
+            <section>
+                <h5>Create a graph with NetworkX</h5>
+                <pre><code class="hljs python language-python" data-line-numbers data-trim>
+G = nx.Graph()
+
+## Add nodes to the graph
+for node in nodes:
+    G.add_node(str(node))
+
+## Add edges to the graph
+for index, row in dfg.iterrows():
+    G.add_edge(
+        str(row["node_1"]),
+        str(row["node_2"]),
+        title=row["edge"],
+        weight=row['count']
+    )
+                </code></pre>
             </section>
         </section>
 
